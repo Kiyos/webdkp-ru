@@ -61,7 +61,26 @@ class armory {
 
 		$server = stripslashes($server);
 		$guildname = stripslashes($guildname);
-		$url = $base . "guild-info.xml?r=".urlencode(trim($server))."&n=".urlencode($guildname);
+		
+		// кодируем русские буквы: Сервер
+		$server_utf_string = iconv ("CP1251", "UTF-8", trim($server));
+		$server_utf_hex_string = bin2hex($server_utf_string);
+		$server_crazy_string = "";
+		for ($i = 2; $i <= strlen ($server_utf_hex_string); $i+=2)
+			{
+				$server_crazy_string = $server_crazy_string."%".substr ($server_utf_hex_string, $i - 2, 2);
+			}
+		// кодируем русские буквы: Гильдия
+		$guild_utf_string = iconv ("CP1251", "UTF-8", trim($guildname));
+		$guild_utf_hex_string = bin2hex($guild_utf_string);
+		$guild_crazy_string = "";
+		for ($i = 2; $i <= strlen ($guild_utf_hex_string); $i+=2)
+			{
+				$guild_crazy_string = $guild_crazy_string."%".substr ($guild_utf_hex_string, $i - 2, 2);
+			}
+		// закончили маятся дурью
+		
+		$url = $base . "guild-info.xml?r=".urlencode(trim($server_crazy_string))."&n=".urlencode($guild_crazy_string);
 
 		return $url;
 	}

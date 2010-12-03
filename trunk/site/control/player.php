@@ -27,7 +27,7 @@ class pagePlayer extends pageDkpMain {
 		global $sql;
 		global $siteUser;
 
-		$playername =   util::getData("player") ;
+		$playername = util::getData("player");
 		$player = $this->updater->GetPlayer($playername);
 		$dkp = dkpUtil::GetPlayerDKP($this->guild->id, $this->tableid, $player->id);
 
@@ -39,7 +39,7 @@ class pagePlayer extends pageDkpMain {
 			return "$playername is not in this guild's table.";
 		}
 
-		$this->title = $this->guild->name." - ".$player->name;
+		$this->title = $this->guild->name." - ".iconv("UTF-8", "CP1251", $player->name);
 		$this->border = 1;
 
 

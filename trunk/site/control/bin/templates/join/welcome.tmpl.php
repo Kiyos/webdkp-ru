@@ -1,14 +1,14 @@
 <img src="<?=$directory?>images/cheer.jpg" style="float:right">
 
-Congratulations! You're WebDKP account is now ready to use.
+Поздравляю! Ваш WebDKP аккаунт готов для работы.
 <br />
 <br />
-Before jumping into your DKP table, you might take this moment to load your guild's roster from the
-<a href="http://www.wowarmory.com/">WowArmory</a>.
+Прежде чем перейти к вашим DKP-таблицам, вы можете загрузить список игроков вашей гильдии 
+из <a href="http://www.wowarmory.com/">WowArmory</a>.
 <br />
 <br />
 
-<input type="button" class="largeButton" value="Load the Roster!" onclick='document.location="<?=($guildurl)?>/Armory"' style="width:200px">
+<input type="button" class="largeButton" value="Загрузить список!" onclick='document.location="<?=($guildurl)?>/Armory"' style="width:200px">
 <br />
 <br />
-<input type="button" class="largeButton" value="Take me to the DKP!" style="width:200px" onclick='document.location="<?=($guildurl)?>"'>
+<input type="button" class="largeButton" value="Вперёд к DKP!" style="width:200px" onclick='document.location="<?=($guildurl)?>"'>

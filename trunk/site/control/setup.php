@@ -15,7 +15,7 @@ class pageSetup extends page {
 	function area2()
 	{
 		global $guildset;
-		$this->title = "Setup WebDKP";
+		$this->title = "Настройка WebDKP";
 		$this->border = 1;
 
 		if($guildset) {
@@ -60,7 +60,7 @@ class pageSetup extends page {
 		$username = strip_tags(util::getData("username"));
 		$password = util::getData("password");
 		$password2 = util::getData("password2");
-		$guildname = strip_tags(util::getData("guild"));
+		$guildname = iconv("CP1251", "UTF-8", strip_tags(util::getData("guild")));
 		$server = util::getData("server");
 		$faction = util::getData("faction");
 		$email = strip_tags(util::getData("email"));

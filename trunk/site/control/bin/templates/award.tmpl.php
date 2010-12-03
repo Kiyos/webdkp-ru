@@ -27,7 +27,7 @@ Invalid Award ID. Could not load award information from the database.
 </tr>
 <tr>
 	<td><b>Awarded By</b></td>
-	<td><?=$award->awardedby?></td>
+	<td><?=iconv("UTF-8", "CP1251", $award->awardedby)?></td>
 </tr>
 <?php if($award->foritem == 0) { ?>
 <tr>
@@ -61,7 +61,7 @@ Invalid Award ID. Could not load award information from the database.
 		}
 	 ?>
 	<td style="width:200px">
-		<a href="<?=$baseurl?>/Player/<?=$player->name?>"><?=$player->name?></a>
+		<a href="<?=$baseurl?>Player/<?=iconv("UTF-8", "CP1251", $player->name)?>"><?=iconv("UTF-8", "CP1251", $player->name)?></a>
 	</td>
 	<?php $i++;	} ?>
 	<?php while($i%5!=0) {echo("<td style='width:200px'></td>\r\n"); $i++; } ?>
