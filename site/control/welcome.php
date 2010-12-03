@@ -13,7 +13,7 @@ class pageWelcome extends page {
 	function area2()
 	{
 		global $guildset;
-		$this->title = "Welcome";
+		$this->title = "Добро пожаловать";
 		$this->border = 1;
 
 		$guildurl = dkpUtil::GetGuildUrl($siteUser->guild)."Admin";
