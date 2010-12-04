@@ -1,14 +1,13 @@
-п»ї<?php if($resetok) { ?>
+<?php if($resetok) { ?>
 
 <div class="message">
-Р’Р°С€ РїР°СЂРѕР»СЊ Р±С‹Р» РёР·РјРµРЅС‘РЅ! РўРµРїРµСЂСЊ РІС‹ РјРѕР¶РµС‚Рµ <a href="<?=$siteRoot?>РІРѕР№С‚Рё">Login</a>
-СЃ РІР°С€РµРј РЅРѕРІС‹Рј РїР°СЂРѕР»РµРј.</div>
+<?=iconv("CP1251", "UTF-8", "Вы успешно изменили свой пароль и можете теперь ")?><a href="<?=$siteRoot?>Login"><?=iconv("CP1251", "UTF-8", "зайти с ним")?></a>.
+</div>
 <br />
 <br />
-<input type="button" class="largeButton" onclick="document.location='<?=$siteRoot?>Login'" value="Login!">
+<input type="button" class="largeButton" onclick="document.location='<?=$siteRoot?>Login'" value="<?=iconv("CP1251", "UTF-8", "Зайти с паролем!")?>">
 <?php } else { ?>
-Р§С‚РѕР±С‹ РёР·РјРµРЅРёС‚СЊ РїР°СЂРѕР»СЊ РґР»СЏ <b><?=$user->username?></b>, РїР°Р¶Р°Р»СѓР№СЃС‚Р° РІРІРµРґРёС‚Рµ РЅРѕРІС‹Р№ РїР°СЂРѕР»СЊ
-РЅРёР¶Рµ.
+<?=iconv("CP1251", "UTF-8", "Пожалуйста, введите новый пароль для ")?><b><?=$user->username?></b><?=iconv("CP1251", "UTF-8", " ниже.")?>
 <br />
 
 <div class="roundedcornr_box">
@@ -22,16 +21,16 @@
 <input type="hidden" name="key" value="<?=$key?>">
 <table class="signup">
 <tr>
-	<td class="label" style="width:175px">Password:</td>
+	<td class="label" style="width:175px"><?=iconv("CP1251", "UTF-8", "Пароль:")?></td>
 	<td><input name="password" type="password"></td>
 </tr>
 <tr>
-	<td class="label" style="width:175px">Retype Password:</td>
+	<td class="label" style="width:175px"><?=iconv("CP1251", "UTF-8", "Еще раз пароль:")?></td>
 	<td><input name="password2" type="password"></td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="submit" value="Reset Password!"></td>
+	<td><input type="submit" value="<?=iconv("CP1251", "UTF-8", "Поменять пароль!")?>"></td>
 </tr>
 </table>
 

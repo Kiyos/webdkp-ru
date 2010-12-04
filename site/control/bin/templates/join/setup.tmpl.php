@@ -1,4 +1,4 @@
-Ôªø–î–æ–±—Ä–æ –ø–æ–∂–∞–ª–æ–≤–∞—Ç—å –≤ WebDKP! –î–ª—è –æ–∫–æ–Ω—á–∞–Ω–∏—è –Ω–∞—Å—Ç—Ä–æ–π–∫–∏, –ø–æ–∂–∞–ª—É–π—Å—Ç–∞ —É–∫–∞–∂–∏—Ç–µ —Å–ª–µ–¥—É—é—â—É—é –∏–Ω—Ñ–æ—Ä–º–∞—Ü–∏—é:
+<?=iconv("CP1251", "UTF-8", "ƒÓ·Ó ÔÓÊ‡ÎÓ‚‡Ú¸ ‚ WebDKP! ◊ÚÓ·˚ Á‡ÍÓÌ˜ËÚ¸ ÔÂ‚Ë˜ÌÛ˛ Ì‡ÒÚÓÈÍÛ, ÔÓÊ‡ÎÛÈÒÚ‡, ÛÍ‡ÊËÚÂ ÒÎÂ‰Û˛˘Û˛ ËÌÙÓÏ‡ˆË˛:")?>
 <br />
 <br />
 <?php if(isset($eventResult)){ ?>
@@ -17,41 +17,45 @@
 
 <table class="signup">
 <tr>
-	<td class="label" style="width:170px">–ê–¥–º–∏–Ω–∏—Å—Ç—Ä–∞—Ç–æ—Ä:</td>
+	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "»Ïˇ ‡‰ÏËÌËÒÚ‡ÚÓ‡:")?></td>
 	<td><input name="username" type="text" value="<?=$username?>"></td>
 </tr>
 <tr>
-	<td class="label">–ü–∞—Ä–æ–ª—å:</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "œ‡ÓÎ¸:")?></td>
 	<td><input name="password" type="password"></td>
 </tr>
 <tr>
-	<td class="label">–ü–æ–¥—Ç–≤–µ—Ä–∂–¥–µ–Ω–∏–µ:</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "≈˘Â ‡Á Ô‡ÓÎ¸:")?></td>
 	<td><input name="password2" type="password"></td>
 </tr>
 <tr>
-	<td class="label">–ì–∏–ª—å–¥–∏—è:</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "√ËÎ¸‰Ëˇ:")?></td>
 	<td><input name="guild" type="text"></td>
 </tr>
 <tr>
-	<td class="label">–°–µ—Ä–≤–µ—Ä:</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "»„Ó‚ÓÈ ÏË:")?></td>
 	<td><input name="server" type="text"></td>
 </tr>
 <tr>
-	<td class="label">–§—Ä–∞–∫—Ü–∏—è:</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "‘‡ÍˆËˇ:")?></td>
 	<td>
 		<select name="faction">
-			<option value="Alliance">–ê–ª—å—è–Ω—Å</option>
-			<option value="Horde" <?=($faction=="Horde"?"Selected":"")?>>–û—Ä–¥–∞</option>
+			<option value="Alliance"><?=iconv("CP1251", "UTF-8", "¿Î¸ˇÌÒ")?></option>
+			<option value="Horde" <?=($faction=="Horde"?"Selected":"")?>><?=iconv("CP1251", "UTF-8", "Œ‰‡")?></option>
 		</select>
 	</td>
 </tr>
 <tr>
-	<td class="label">Email:</td>
-	<td><input name="email" type="text" value="<?=$email?>"> ( –ò—Å–ø–æ–ª—å–∑—É–µ—Ç—Å—è –¥–ª—è –Ω–∞–ø–æ–º–∏–Ω–∞–Ω–∏—è –ø–∞—Ä–æ–ª—è )</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "›ÎÂÍÚÓÔÓ˜Ú‡:")?></td>
+	<td><input name="email" type="text" value="<?=$email?>"><?=iconv("CP1251", "UTF-8", " (ËÒÔÓÎ¸ÁÛÂÚÒˇ ‰Îˇ Ì‡ÔÓÏËÌ‡ÌËˇ Ô‡ÓÎˇ)")?></td>
+</tr>
+<tr>
+	<td><br></td>
+	<td><br></td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="submit" value="–ó–∞–∫–æ–Ω—á–∏—Ç—å –Ω–∞—Å—Ç—Ä–æ–π–∫—É!"></td>
+	<td><input type="submit" style="width:500px" value="<?=iconv("CP1251", "UTF-8", "«‡ÍÓÌ˜ËÚ¸ Ì‡ÒÚÓÈÍÛ!")?>"></td>
 </tr>
 </table>
 
@@ -60,8 +64,3 @@
 </div>
 <div class="roundedcornr_bottom"><div></div></div>
 </div>
-
-
-
-
-

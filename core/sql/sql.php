@@ -64,7 +64,7 @@ class sql
 
 				$dbName = sql::Escape($databaseName);
 
-				$this->Query("CREATE DATABASE `$dbName`;");
+				$this->Query("CREATE DATABASE `$dbName` CHARACTER SET utf8 COLLATE utf8_general_ci;");
 				@mysql_select_db($databaseName, $this->id) or
             	$this->ShowError("Unable to select database: $databaseName");
 			}

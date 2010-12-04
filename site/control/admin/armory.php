@@ -15,7 +15,7 @@ class pageArmory extends pageAdminMain {
 	function area2()
 	{
 		global $siteRoot;
-		$this->title = "Sync with Armory";
+		$this->title = iconv("CP1251", "UTF-8", "Синхронизация с Оружейной");
 		$this->border = 1;
 
 		return $this->fetch("armory.tmpl.php");

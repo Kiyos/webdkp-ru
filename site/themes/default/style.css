@@ -489,15 +489,15 @@ table.signup td.label {
 
 
 table.dkpForm {
-	width: 100%;
+	width: 452px;
 	}
 table.dkpForm input {
-	width: 200px;
+	width: 222px;
 	padding: 3px;
 	font-size: 110%;
 	}
 table.dkpForm select {
-	width: 210px;
+	width: 230px;
 	padding: 3px;
 	font-size: 110%;
 	}

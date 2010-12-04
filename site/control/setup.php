@@ -1,4 +1,4 @@
-п»ї<?php
+<?php
 include_once("lib/dkp/dkpUtil.php");
 include_once("lib/dkp/dkpUserPermissions.php");
 /*=================================================
@@ -6,8 +6,15 @@ The news page displays news to the user.
 =================================================*/
 class pageSetup extends page {
 
-	var $layout = "Columns1";
-	var $pagetitle = "Setup";
+	var $layout;
+	var $pagetitle;
+	
+	// конструктор
+	function pageSetup(){
+		$this->layout = "Columns1";
+		$this->pagetitle = iconv("CP1251", "UTF-8", "Первичная настройка");
+	}
+	
 	/*=================================================
 	Shows a list of posts to the user. The user has
 	links to skip to any page of the posts
@@ -15,11 +22,11 @@ class pageSetup extends page {
 	function area2()
 	{
 		global $guildset;
-		$this->title = "РќР°СЃС‚СЂРѕР№РєР° WebDKP";
+		$this->title = iconv("CP1251", "UTF-8", "Первичная настройка WebDKP");
 		$this->border = 1;
 
 		if($guildset) {
-			return "Setup has already been run. You can change these settings from your control panel instead.";
+			return iconv("CP1251", "UTF-8", "Первичная настройка уже сделана. Эти опции вы можете контролировать из панели управления.");
 		}
 
 		$servers = dkpUtil::GetServerList();
@@ -54,19 +61,19 @@ class pageSetup extends page {
 	function eventSetup(){
 		global $guildset;
 		if($guildset) {
-			return $this->setEventResult(false, "You have already completed setup. You cannot run setup again.");
+			return $this->setEventResult(false, iconv("CP1251", "UTF-8", "Первичная настройка уже сделана. Ее нельзя сделать еще раз."));
 		}
 
 		$username = strip_tags(util::getData("username"));
 		$password = util::getData("password");
 		$password2 = util::getData("password2");
-		$guildname = iconv("CP1251", "UTF-8", strip_tags(util::getData("guild")));
+		$guildname = strip_tags(util::getData("guild"));
 		$server = util::getData("server");
 		$faction = util::getData("faction");
 		$email = strip_tags(util::getData("email"));
 
 		if(strpos($guildname, "'")!== false || strpos($guildname,"\"") !== false || strpos($guildname,"/") !== false) {
-			return $this->setEventResult(false, "You can not have special characters such as ', \", or / in your guild name.");
+			return $this->setEventResult(false, iconv("CP1251", "UTF-8", "В названии гильдии не бывает специальных символов, вроде ', \", или /."));
 		}
 
 		//step 1 - register the account

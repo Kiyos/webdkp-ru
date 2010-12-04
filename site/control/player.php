@@ -1,4 +1,4 @@
-п»ї<?php
+<?php
 include_once("lib/dkp/dkpUtil.php");
 include_once("lib/stats/wowstats.php");
 include_once("dkpmain.php");
@@ -7,17 +7,22 @@ The news page displays news to the user.
 =================================================*/
 class pagePlayer extends pageDkpMain {
 
+	var $layout;
+	var $pageurl;
+	var $tab;
+	
+	// конструктор
 	function pagePlayer(){
-
 		$playername = util::getData("player");
-		$this->pageurl = "Player/".$playername;
+		pageurl = "Player/".$playername;
 
+		$this->layout = "Columns1";
+		$this->pageurl = "Player";
+		$this->tab = SiteTabs::DKP;
+		
 		pageDkpMain::pageDkpMain();
 	}
-
-	var $layout = "Columns1";
-	var $pageurl = "Player";
-	var $tab = SiteTabs::DKP;
+	
 	/*=================================================
 	Shows a list of posts to the user. The user has
 	links to skip to any page of the posts
@@ -31,12 +36,12 @@ class pagePlayer extends pageDkpMain {
 		$player = $this->updater->GetPlayer($playername);
 		$dkp = dkpUtil::GetPlayerDKP($this->guild->id, $this->tableid, $player->id);
 
-		$this->pagetitle .= " - $playername ";
+		$this->pagetitle .= " - $playername";
 
 		if($player->id == "") {
-			$this->title = $this->guild->name." - Unknown Player";
+			$this->title = $this->guild->name." - ".iconv("CP1251", "UTF-8", "Неизвестный игрок");
 			$this->border = 1;
-			return "$playername is not in this guild's table.";
+			return "$playername".iconv("CP1251", "UTF-8", " отсутствует в таблице этой гильдии.");
 		}
 
 		$this->title = $this->guild->name." - ".$player->name;
