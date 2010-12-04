@@ -1,14 +1,14 @@
-Ôªø<img src="<?=$directory?>images/cheer.jpg" style="float:right">
+<img src="<?=$directory?>images/cheer.jpg" style="float:right">
 
-–ü–æ–∑–¥—Ä–∞–≤–ª—è—é! –í–∞—à WebDKP –∞–∫–∫–∞—É–Ω—Ç –≥–æ—Ç–æ–≤ –¥–ª—è —Ä–∞–±–æ—Ç—ã.
+<?=iconv("CP1251", "UTF-8", "¬‡¯ WebDKP-‡ÍÍ‡ÛÌÚ „ÓÚÓ‚ ‰Îˇ ‡·ÓÚ˚. œËÏËÚÂ ÔÓÁ‰‡‚ÎÂÌËˇ!")?>
 <br />
 <br />
-–ü—Ä–µ–∂–¥–µ —á–µ–º –ø–µ—Ä–µ–π—Ç–∏ –∫ –≤–∞—à–∏–º DKP-—Ç–∞–±–ª–∏—Ü–∞–º, –≤—ã –º–æ–∂–µ—Ç–µ –∑–∞–≥—Ä—É–∑–∏—Ç—å —Å–ø–∏—Å–æ–∫ –∏–≥—Ä–æ–∫–æ–≤ –≤–∞—à–µ–π –≥–∏–ª—å–¥–∏–∏ 
-–∏–∑ <a href="http://www.wowarmory.com/">WowArmory</a>.
+<?=iconv("CP1251", "UTF-8", "œÂÊ‰Â ˜ÂÏ ÔÂÂÈÚË Í ‚‡¯ËÏ DKP-Ú‡·ÎËˆ‡Ï, ‚˚ ÏÓÊÂÚÂ Á‡„ÛÁËÚ¸ ÒÔËÒÓÍ Ë„ÓÍÓ‚ ‚‡¯ÂÈ „ËÎ¸‰ËË ËÁ ")?>
+<a href="http://eu.wowarmory.com/"><?=iconv("CP1251", "UTF-8", "ŒÛÊÂÈÌÓÈ World of Warcraft")?></a>.
 <br />
 <br />
 
-<input type="button" class="largeButton" value="–ó–∞–≥—Ä—É–∑–∏—Ç—å —Å–ø–∏—Å–æ–∫!" onclick='document.location="<?=($guildurl)?>/Armory"' style="width:200px">
+<input type="button" class="largeButton" value="<?=iconv("CP1251", "UTF-8", "«‡„ÛÁËÚ¸ ÒÔËÒÓÍ!")?>" onclick='document.location="<?=($guildurl)?>/Armory"' style="width:200px">
 <br />
 <br />
-<input type="button" class="largeButton" value="–í–ø–µ—Ä—ë–¥ –∫ DKP!" style="width:200px" onclick='document.location="<?=($guildurl)?>"'>
+<input type="button" class="largeButton" value="<?=iconv("CP1251", "UTF-8", "¬ÔÂÂ‰, Í DKP!")?>" style="width:200px" onclick='document.location="<?=($guildurl)?>"'>

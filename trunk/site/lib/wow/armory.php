@@ -1,4 +1,4 @@
-Ôªø<?php
+<?php
 /**
  * Downloads player statistics for a guild from the World of Warcraft
  * Armory.
@@ -10,9 +10,28 @@ include_once("lib/dkp/dkpGuild.php");
 include_once("lib/dkp/dkpUser.php");
 include_once("lib/dkp/dkpUtil.php");
 
+/**
+ * ¬ÓÁ‚‡˘‡ÂÚ ÒÚÓÍÛ ¯ÂÒÚÌ‡‰ˆ‡ÚÂË˜Ì˚ı ÍÓ‰Ó‚ ÒËÏ‚ÓÎÓ‚ ‚ıÓ‰ÌÓÈ ÒÚÓÍË (Î˛·˚ı),
+ * ÔÂ‰‚‡ˇˇ Í‡Ê‰˚È ÍÓ‰ ÁÌ‡ÍÓÏ ÔÓˆÂÌÚ‡. œÓ‰ıÓ‰ËÚ ‰Îˇ ASCII Ë UTF-8.
+ * œËÏÂ: "abcde" -> "%61%62%63%64%65"
+ */
+function AlphanumericURLEncode($inputString)
+{
+	if (!$inputString) return "";
+	
+	$outputString = "";
+	
+	$hexString = bin2hex($inputString);
+	for ($i = 2; $i <= strlen ($hexString); $i+=2){
+		$outputString .= "%" . substr ($hexString, $i - 2, 2);
+	}
+	
+	return $outputString;
+}
+
 class armory {
-	const americanUrl = "http://www.wowarmory.com/";
-	const euroUrl = "http://armory.wow-europe.com/";
+	const americanUrl = "http://www.wowarmory.com/"; // Ò / ‚ ÍÓÌˆÂ!
+	const euroUrl = "http://eu.wowarmory.com/"; // Ò / ‚ ÍÓÌˆÂ!
 
 	const AMERICAN = 0;
 	const EURO = 1;
@@ -44,7 +63,7 @@ class armory {
 			$guild = new dkpGuild();
 			$guild->loadFromDatabase($guildid);
 			if($guild->id == "")
-				return "http://www.wowarmory.com";
+				return $americanUrl;
 		}
 		return armory::GetUrlByName($guild->name, $guild->server, $armorySite);
 	}
@@ -62,37 +81,10 @@ class armory {
 		$server = stripslashes($server);
 		$guildname = stripslashes($guildname);
 		
-		// –∫–æ–¥–∏—Ä—É–µ–º —Ä—É—Å—Å–∫–∏–µ –±—É–∫–≤—ã: –°–µ—Ä–≤–µ—Ä
-		/*$server_utf_string = iconv ("CP1251", "UTF-8", trim($server));
-		$server_utf_hex_string = bin2hex($server_utf_string);
-		$server_crazy_string = "";
-		for ($i = 2; $i <= strlen ($server_utf_hex_string); $i+=2)
-			{
-				$server_crazy_string = $server_crazy_string."%".substr ($server_utf_hex_string, $i - 2, 2);
-			}
+		$serverURLReadyName = AlphanumericURLEncode(trim($server));
+		$guildURLReadyName = AlphanumericURLEncode($guildname);
 
-
-		// –∫–æ–¥–∏—Ä—É–µ–º —Ä—É—Å—Å–∫–∏–µ –±—É–∫–≤—ã: –ì–∏–ª—å–¥–∏—è
-		echo "–∏—Å—Ö–æ–¥–Ω–∏–∫: ".$guildname;
-
-		$guild_utf_string = iconv ("CP1251", "UTF-8", trim($guildname));
-		echo "—à–∞–≥1: ".$guild_utf_string;
-
-		$guild_utf_hex_string = bin2hex($guild_utf_string);
-		echo "—à–∞–≥2: ".$guild_utf_string;
-
-		$guild_crazy_string = "";
-		for ($i = 2; $i <= strlen ($guild_utf_hex_string); $i+=2)
-			{
-				$guild_crazy_string = $guild_crazy_string."%".substr ($guild_utf_hex_string, $i - 2, 2);
-			}
-		// –∑–∞–∫–æ–Ω—á–∏–ª–∏ –º–∞—è—Ç—Å—è –¥—É—Ä—å—é
-		echo $guild_crazy_string;*/
-		
-		//$url = $base . "guild-info.xml?r=".urlencode(trim($server_crazy_string))."&n=".urlencode($guild_crazy_string);
-		$url = $base . "guild-info.xml?r=".urlencode(trim($server))."&n=".urlencode($guildname);
-
-		return $url;
+		return $base . "guild-info.xml?r=" . $serverURLReadyName . "&n=" . $guildURLReadyName;
 	}
 
   /**

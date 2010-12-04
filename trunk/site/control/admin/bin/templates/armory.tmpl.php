@@ -1,46 +1,39 @@
-п»ї<?=$tabs?>
+<?=$tabs?>
 <?=$sidebar?>
 
 <div class="adminContents">
 
 <br />
-Р—РґРµСЃСЊ РІС‹ РјРѕР¶РµС‚Рµ СЃРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°С‚СЊ РІР°С€Рё DKP-С‚Р°Р±Р»РёС†С‹ СЃРѕ СЃРїРёСЃРєРѕРј РІР°С€РµР№ РіРёР»СЊРґРёРё
-<!--Here you can synchronize your DKP table with your guild roster from the-->
-РёР· <a href="http://www.wowarmory.com/">World of Warcraft Armory</a>. Р­С‚Рѕ РїРѕР·РІРѕР»РёС‚
-<!--<a href="http://www.wowarmory.com/">World of Warcraft Armory</a>. This will-->
-СѓР±РµРґРёС‚СЊСЃСЏ С‡С‚Рѕ РІСЃРµ РёР· РіРёР»СЊРґРёРё РїРѕСЏРІСЏС‚СЃСЏ РІ С‚Р°Р±Р»РёС†Рµ. Р•СЃР»Рё РёРіСЂРѕРєР° РµС‰С‘ РЅРµС‚ РІ С‚Р°Р±Р»РёС†Рµ,
-<!--make sure everyone in you're guild appears in your table. If a player-->
-С‚Рѕ РѕРЅ Р±СѓРґРµС‚ РґРѕР±Р°РІР»РµРЅ СЃ РЅСѓР»РµРІС‹Рј DKP.
-<!-- isn't in the table yet, they are added automatically with 0 DKP.-->
+<?=iconv("CP1251", "UTF-8", "Здесь вы можете синхронизировать ваши таблицы DKP со списком игроков вашей гильдии из ")?>
+<a href="http://eu.wowarmory.com/"><?=iconv("CP1251", "UTF-8", "Оружейной World of Warcraft")?></a>.
+<?=iconv("CP1251", "UTF-8", "Это для того, чтобы все нужные игроки гильдии оказались в вашей таблице. Если ")?>
+<?=iconv("CP1251", "UTF-8", "какого-то игрока в таблице еще нет, то он будет автоматически добавлен, получив ноль DKP.")?>
 <br />
 <br />
-РќРёР¶Рµ РІС‹ РґРѕР»Р¶РЅС‹ СѓРєР°Р·Р°С‚СЊ РёРјСЏ РіРёР»СЊРґРёРё Рё СЃРµСЂРІРµСЂР°, С‚РѕС‡РЅРѕ С‚Р°Рє, РєР°Рє РѕРЅРё СѓРєР°Р·Р°РЅРЅС‹ РІ "РћСЂСѓР¶РµР№РЅРѕР№".
-<!--Below you must enter your guild's name and server, exactly as it is used on The Armory.-->
-Р”Р°РЅРЅС‹Рµ РјРѕРіСѓС‚ РѕС‚Р»РёС‡Р°С‚СЊСЃСЏ РѕС‚ С‚РµС…, РєРѕС‚РѕСЂС‹Рµ РІС‹ СѓРєР°Р·С‹РІР°Р»Рё РїСЂРё СЂРµРіРёСЃС‚СЂР°С†РёРё РІ WebDKP
-<!--This can be different then the guild and server you used when you registered
-with WebDKP.-->
+<?=iconv("CP1251", "UTF-8", "Ниже вы должны указать имя гильдии и сервера точно так, как они указаны в Оружейной. ")?>
+<?=iconv("CP1251", "UTF-8", "Эти данные могут отличаться от тех, которые вы указали при первичной настройке WebDKP.")?>
 <br />
 <br />
 <form action="<?=$baseurl?>Admin/Armory" method="post" name="armory">
 <input type="hidden" name="event" value="sync">
-<table class="dkpForm" >
+<table class="dkpForm">
 <tr>
-	<td class="label" style="width:180px">Р“РёР»СЊРґРёСЏ:</td>
-	<td><input name="guild" type="text" value="<?=$guild->name?>" ></td>
+	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "Гильдия:")?></td>
+	<td><input name="guild" type="text" value="<?=$guild->name?>"></td>
 </tr>
 <tr>
-	<td class="label" style="width:180px">РЎРµСЂРІРµСЂ:</td>
+	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "Игровой мир:")?></td>
 	<td><input name="server" type="text" value="<?=$guild->server?>" ></td>
 </tr>
 <tr>
-	<td class="label" style="width:180px">РњРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ РёРіСЂРѕРєР°:</td>
+	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "Минимальный уровень игрока:")?></td>
 	<td><input name="level" type="text" value="80"></td>
 </tr>
 <tr>
-	<td class="label">РЎРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°С‚СЊ СЃ:</td>
+	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "Синхронизировать с:")?></td>
 	<td>
 		<select name="table">
-			<option value="0">All DKP Tables</option>
+			<option value="0"><?=iconv("CP1251", "UTF-8", "всеми таблицами DKP")?></option>
 			<?php foreach($dkptables as $table) { ?>
 			<option value="<?=$table->tableid?>"><?=$table->name?></option>
 			<?php } ?>
@@ -48,16 +41,16 @@ with WebDKP.-->
 	</td>
 </tr>
 <tr>
-	<td class="label" style="width:180px">РЎРµСЂРІРµСЂ РћСЂСѓР¶РµР№РЅРѕР№:</td>
+	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "Сервер Оружейной:")?></td>
 	<td>
 		<select name="wowserver">
-			<option value="<?=armory::EURO?>">European</option>
-			<option value="<?=armory::AMERICAN?>">American</option>
+			<option value="<?=armory::AMERICAN?>"><?=iconv("CP1251", "UTF-8", "американский")?></option>
+			<option value="<?=armory::EURO?>"><?=iconv("CP1251", "UTF-8", "европейский (в т.ч. русский)")?></option>
 		</select>
 	</td>
 </tr>
 <tr>
-	<td colspan=2><input type="submit" value="Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє!"></td>
+	<td colspan="2"><p align="center"><input type="submit" value="<?=iconv("CP1251", "UTF-8", "Загрузить список!")?>"></p></td>
 </tr>
 </table>
 <?php if(isset($eventResult)){ ?>
