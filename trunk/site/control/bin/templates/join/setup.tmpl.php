@@ -1,4 +1,4 @@
-Добро пожаловать в WebDKP! Для окончания настройки, пожалуйста укажите следующую информацию:
+п»їР”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ РІ WebDKP! Р”Р»СЏ РѕРєРѕРЅС‡Р°РЅРёСЏ РЅР°СЃС‚СЂРѕР№РєРё, РїРѕР¶Р°Р»СѓР№СЃС‚Р° СѓРєР°Р¶РёС‚Рµ СЃР»РµРґСѓСЋС‰СѓСЋ РёРЅС„РѕСЂРјР°С†РёСЋ:
 <br />
 <br />
 <?php if(isset($eventResult)){ ?>
@@ -17,41 +17,41 @@
 
 <table class="signup">
 <tr>
-	<td class="label" style="width:170px">Администратор:</td>
+	<td class="label" style="width:170px">РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂ:</td>
 	<td><input name="username" type="text" value="<?=$username?>"></td>
 </tr>
 <tr>
-	<td class="label">Пароль:</td>
+	<td class="label">РџР°СЂРѕР»СЊ:</td>
 	<td><input name="password" type="password"></td>
 </tr>
 <tr>
-	<td class="label">Подтверждение:</td>
+	<td class="label">РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ:</td>
 	<td><input name="password2" type="password"></td>
 </tr>
 <tr>
-	<td class="label">Гильдия:</td>
+	<td class="label">Р“РёР»СЊРґРёСЏ:</td>
 	<td><input name="guild" type="text"></td>
 </tr>
 <tr>
-	<td class="label">Сервер:</td>
+	<td class="label">РЎРµСЂРІРµСЂ:</td>
 	<td><input name="server" type="text"></td>
 </tr>
 <tr>
-	<td class="label">Фракция:</td>
+	<td class="label">Р¤СЂР°РєС†РёСЏ:</td>
 	<td>
 		<select name="faction">
-			<option value="Alliance">Альянс</option>
-			<option value="Horde" <?=($faction=="Horde"?"Selected":"")?>>Орда</option>
+			<option value="Alliance">РђР»СЊСЏРЅСЃ</option>
+			<option value="Horde" <?=($faction=="Horde"?"Selected":"")?>>РћСЂРґР°</option>
 		</select>
 	</td>
 </tr>
 <tr>
 	<td class="label">Email:</td>
-	<td><input name="email" type="text" value="<?=$email?>"> ( Используется для напоминания пароля )</td>
+	<td><input name="email" type="text" value="<?=$email?>"> ( РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РЅР°РїРѕРјРёРЅР°РЅРёСЏ РїР°СЂРѕР»СЏ )</td>
 </tr>
 <tr>
 	<td></td>
-	<td><input type="submit" value="Закончить настройку!"></td>
+	<td><input type="submit" value="Р—Р°РєРѕРЅС‡РёС‚СЊ РЅР°СЃС‚СЂРѕР№РєСѓ!"></td>
 </tr>
 </table>
 

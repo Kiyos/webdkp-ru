@@ -1,7 +1,7 @@
-If you forgot your account's passowrd, you can request it to be reset here.
-To reset your account, please enter your username below. An email will be
-sent to you with more instructions. If you did not register an email address with your
-account, you will need to submit a reset request on the
+﻿Если вы забыли ваш пароль, вы можете сбросить его здесь.
+Для сброса пароля, пожалуйста введите ваше имя ниже. На ваш почтовый ящик
+будут высланы инструкции. Если вы не указали e-mail при регистрации
+аккаунта, you will need to submit a reset request on the
 <a href="http://www.webdkp.com/phpBB2">Forums</a>.
 <br />
 <br />

@@ -1,22 +1,22 @@
-<?=$tabs?>
+п»ї<?=$tabs?>
 <?=$sidebar?>
 
 <div class="adminContents">
 
 <br />
-Здесь вы можете синхронизировать ваши DKP-таблицы со списком вашей гильдии
+Р—РґРµСЃСЊ РІС‹ РјРѕР¶РµС‚Рµ СЃРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°С‚СЊ РІР°С€Рё DKP-С‚Р°Р±Р»РёС†С‹ СЃРѕ СЃРїРёСЃРєРѕРј РІР°С€РµР№ РіРёР»СЊРґРёРё
 <!--Here you can synchronize your DKP table with your guild roster from the-->
-из <a href="http://www.wowarmory.com/">World of Warcraft Armory</a>. Это позволит
+РёР· <a href="http://www.wowarmory.com/">World of Warcraft Armory</a>. Р­С‚Рѕ РїРѕР·РІРѕР»РёС‚
 <!--<a href="http://www.wowarmory.com/">World of Warcraft Armory</a>. This will-->
-убедиться что все из гильдии появятся в таблице. Если игрока ещё нет в таблице,
+СѓР±РµРґРёС‚СЊСЃСЏ С‡С‚Рѕ РІСЃРµ РёР· РіРёР»СЊРґРёРё РїРѕСЏРІСЏС‚СЃСЏ РІ С‚Р°Р±Р»РёС†Рµ. Р•СЃР»Рё РёРіСЂРѕРєР° РµС‰С‘ РЅРµС‚ РІ С‚Р°Р±Р»РёС†Рµ,
 <!--make sure everyone in you're guild appears in your table. If a player-->
-то он будет добавлен с нулевым DKP.
+С‚Рѕ РѕРЅ Р±СѓРґРµС‚ РґРѕР±Р°РІР»РµРЅ СЃ РЅСѓР»РµРІС‹Рј DKP.
 <!-- isn't in the table yet, they are added automatically with 0 DKP.-->
 <br />
 <br />
-Ниже вы должны указать имя гильдии и сервера, точно так, как они указанны в "Оружейной".
+РќРёР¶Рµ РІС‹ РґРѕР»Р¶РЅС‹ СѓРєР°Р·Р°С‚СЊ РёРјСЏ РіРёР»СЊРґРёРё Рё СЃРµСЂРІРµСЂР°, С‚РѕС‡РЅРѕ С‚Р°Рє, РєР°Рє РѕРЅРё СѓРєР°Р·Р°РЅРЅС‹ РІ "РћСЂСѓР¶РµР№РЅРѕР№".
 <!--Below you must enter your guild's name and server, exactly as it is used on The Armory.-->
-Данные могут отличаться от тех, которые вы указывали при регистрации в WebDKP
+Р”Р°РЅРЅС‹Рµ РјРѕРіСѓС‚ РѕС‚Р»РёС‡Р°С‚СЊСЃСЏ РѕС‚ С‚РµС…, РєРѕС‚РѕСЂС‹Рµ РІС‹ СѓРєР°Р·С‹РІР°Р»Рё РїСЂРё СЂРµРіРёСЃС‚СЂР°С†РёРё РІ WebDKP
 <!--This can be different then the guild and server you used when you registered
 with WebDKP.-->
 <br />
@@ -25,19 +25,19 @@ with WebDKP.-->
 <input type="hidden" name="event" value="sync">
 <table class="dkpForm" >
 <tr>
-	<td class="label" style="width:180px">Гильдия:</td>
-	<td><input name="guild" type="text" value="<?=iconv("UTF-8", "CP1251", $guild->name)?>" ></td>
+	<td class="label" style="width:180px">Р“РёР»СЊРґРёСЏ:</td>
+	<td><input name="guild" type="text" value="<?=$guild->name?>" ></td>
 </tr>
 <tr>
-	<td class="label" style="width:180px">Сервер:</td>
+	<td class="label" style="width:180px">РЎРµСЂРІРµСЂ:</td>
 	<td><input name="server" type="text" value="<?=$guild->server?>" ></td>
 </tr>
 <tr>
-	<td class="label" style="width:180px">Минимальный уровень игрока:</td>
+	<td class="label" style="width:180px">РњРёРЅРёРјР°Р»СЊРЅС‹Р№ СѓСЂРѕРІРµРЅСЊ РёРіСЂРѕРєР°:</td>
 	<td><input name="level" type="text" value="80"></td>
 </tr>
 <tr>
-	<td class="label">Синхронизировать с:</td>
+	<td class="label">РЎРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°С‚СЊ СЃ:</td>
 	<td>
 		<select name="table">
 			<option value="0">All DKP Tables</option>
@@ -48,16 +48,16 @@ with WebDKP.-->
 	</td>
 </tr>
 <tr>
-	<td class="label" style="width:180px">Сервер Оружейной:</td>
+	<td class="label" style="width:180px">РЎРµСЂРІРµСЂ РћСЂСѓР¶РµР№РЅРѕР№:</td>
 	<td>
 		<select name="wowserver">
-			<option value="<?=armory::AMERICAN?>">American</option>
 			<option value="<?=armory::EURO?>">European</option>
+			<option value="<?=armory::AMERICAN?>">American</option>
 		</select>
 	</td>
 </tr>
 <tr>
-	<td colspan=2><input type="submit" value="Загрузить список!"></td>
+	<td colspan=2><input type="submit" value="Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє!"></td>
 </tr>
 </table>
 <?php if(isset($eventResult)){ ?>
