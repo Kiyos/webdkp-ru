@@ -43,7 +43,7 @@ class wowstats {
 	============================================================*/
 	//the url where item xml data can be downloaded from for items.
 	//{ITEM_NAME} will be replaced with a url encoded name
-	const itemUrl = "http://www.wowhead.com/item={ITEM_NAME}&xml";
+	const itemUrl = "http://ru.wowhead.com/item={ITEM_NAME}&xml";
 
 	/*===========================================================
 
