@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 /*=================================================
 The news page displays news to the user.
 =================================================*/
@@ -13,7 +13,7 @@ class pageWelcome extends page {
 	function area2()
 	{
 		global $guildset;
-		$this->title = "Äîáğî ïîæàëîâàòü";
+		$this->title = "Ğ”Ğ¾Ğ±Ñ€Ğ¾ Ğ¿Ğ¾Ğ¶Ğ°Ğ»Ğ¾Ğ²Ğ°Ñ‚ÑŒ";
 		$this->border = 1;
 
 		$guildurl = dkpUtil::GetGuildUrl($siteUser->guild)."Admin";

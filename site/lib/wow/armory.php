@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 /**
  * Downloads player statistics for a guild from the World of Warcraft
  * Armory.
@@ -62,25 +62,35 @@ class armory {
 		$server = stripslashes($server);
 		$guildname = stripslashes($guildname);
 		
-		// êîäèðóåì ðóññêèå áóêâû: Ñåðâåð
-		$server_utf_string = iconv ("CP1251", "UTF-8", trim($server));
+		// ÐºÐ¾Ð´Ð¸Ñ€ÑƒÐµÐ¼ Ñ€ÑƒÑÑÐºÐ¸Ðµ Ð±ÑƒÐºÐ²Ñ‹: Ð¡ÐµÑ€Ð²ÐµÑ€
+		/*$server_utf_string = iconv ("CP1251", "UTF-8", trim($server));
 		$server_utf_hex_string = bin2hex($server_utf_string);
 		$server_crazy_string = "";
 		for ($i = 2; $i <= strlen ($server_utf_hex_string); $i+=2)
 			{
 				$server_crazy_string = $server_crazy_string."%".substr ($server_utf_hex_string, $i - 2, 2);
 			}
-		// êîäèðóåì ðóññêèå áóêâû: Ãèëüäèÿ
+
+
+		// ÐºÐ¾Ð´Ð¸Ñ€ÑƒÐµÐ¼ Ñ€ÑƒÑÑÐºÐ¸Ðµ Ð±ÑƒÐºÐ²Ñ‹: Ð“Ð¸Ð»ÑŒÐ´Ð¸Ñ
+		echo "Ð¸ÑÑ…Ð¾Ð´Ð½Ð¸Ðº: ".$guildname;
+
 		$guild_utf_string = iconv ("CP1251", "UTF-8", trim($guildname));
+		echo "ÑˆÐ°Ð³1: ".$guild_utf_string;
+
 		$guild_utf_hex_string = bin2hex($guild_utf_string);
+		echo "ÑˆÐ°Ð³2: ".$guild_utf_string;
+
 		$guild_crazy_string = "";
 		for ($i = 2; $i <= strlen ($guild_utf_hex_string); $i+=2)
 			{
 				$guild_crazy_string = $guild_crazy_string."%".substr ($guild_utf_hex_string, $i - 2, 2);
 			}
-		// çàêîí÷èëè ìàÿòñÿ äóðüþ
+		// Ð·Ð°ÐºÐ¾Ð½Ñ‡Ð¸Ð»Ð¸ Ð¼Ð°ÑÑ‚ÑÑ Ð´ÑƒÑ€ÑŒÑŽ
+		echo $guild_crazy_string;*/
 		
-		$url = $base . "guild-info.xml?r=".urlencode(trim($server_crazy_string))."&n=".urlencode($guild_crazy_string);
+		//$url = $base . "guild-info.xml?r=".urlencode(trim($server_crazy_string))."&n=".urlencode($guild_crazy_string);
+		$url = $base . "guild-info.xml?r=".urlencode(trim($server))."&n=".urlencode($guildname);
 
 		return $url;
 	}

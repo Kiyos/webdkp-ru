@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include_once("lib/dkp/dkpUtil.php");
 include_once("lib/stats/wowstats.php");
 include_once("dkpmain.php");
@@ -39,7 +39,7 @@ class pagePlayer extends pageDkpMain {
 			return "$playername is not in this guild's table.";
 		}
 
-		$this->title = $this->guild->name." - ".iconv("UTF-8", "CP1251", $player->name);
+		$this->title = $this->guild->name." - ".$player->name;
 		$this->border = 1;
 
 

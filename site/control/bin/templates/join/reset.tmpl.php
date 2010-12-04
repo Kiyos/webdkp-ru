@@ -1,14 +1,14 @@
-<?php if($resetok) { ?>
+﻿<?php if($resetok) { ?>
 
 <div class="message">
-Your password has now been reset! You can now <a href="<?=$siteRoot?>Login">Login</a>
-with your new password.</div>
+Ваш пароль был изменён! Теперь вы можете <a href="<?=$siteRoot?>войти">Login</a>
+с вашем новым паролем.</div>
 <br />
 <br />
 <input type="button" class="largeButton" onclick="document.location='<?=$siteRoot?>Login'" value="Login!">
 <?php } else { ?>
-To reset the password for <b><?=$user->username?></b>, please enter a new password
-below.
+Чтобы изменить пароль для <b><?=$user->username?></b>, пажалуйста введите новый пароль
+ниже.
 <br />
 
 <div class="roundedcornr_box">

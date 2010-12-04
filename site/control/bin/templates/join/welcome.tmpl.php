@@ -1,14 +1,14 @@
-<img src="<?=$directory?>images/cheer.jpg" style="float:right">
+п»ї<img src="<?=$directory?>images/cheer.jpg" style="float:right">
 
-Поздравляю! Ваш WebDKP аккаунт готов для работы.
+РџРѕР·РґСЂР°РІР»СЏСЋ! Р’Р°С€ WebDKP Р°РєРєР°СѓРЅС‚ РіРѕС‚РѕРІ РґР»СЏ СЂР°Р±РѕС‚С‹.
 <br />
 <br />
-Прежде чем перейти к вашим DKP-таблицам, вы можете загрузить список игроков вашей гильдии 
-из <a href="http://www.wowarmory.com/">WowArmory</a>.
+РџСЂРµР¶РґРµ С‡РµРј РїРµСЂРµР№С‚Рё Рє РІР°С€РёРј DKP-С‚Р°Р±Р»РёС†Р°Рј, РІС‹ РјРѕР¶РµС‚Рµ Р·Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє РёРіСЂРѕРєРѕРІ РІР°С€РµР№ РіРёР»СЊРґРёРё 
+РёР· <a href="http://www.wowarmory.com/">WowArmory</a>.
 <br />
 <br />
 
-<input type="button" class="largeButton" value="Загрузить список!" onclick='document.location="<?=($guildurl)?>/Armory"' style="width:200px">
+<input type="button" class="largeButton" value="Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє!" onclick='document.location="<?=($guildurl)?>/Armory"' style="width:200px">
 <br />
 <br />
-<input type="button" class="largeButton" value="Вперёд к DKP!" style="width:200px" onclick='document.location="<?=($guildurl)?>"'>
+<input type="button" class="largeButton" value="Р’РїРµСЂС‘Рґ Рє DKP!" style="width:200px" onclick='document.location="<?=($guildurl)?>"'>
