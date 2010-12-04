@@ -14,7 +14,7 @@ class pagePlayer extends pageDkpMain {
 	// конструктор
 	function pagePlayer(){
 		$playername = util::getData("player");
-		pageurl = "Player/".$playername;
+		$pageurl = "Player/".$playername;
 
 		$this->layout = "Columns1";
 		$this->pageurl = "Player";
