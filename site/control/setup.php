@@ -1,4 +1,4 @@
-<?php
+ï»¿<?php
 include_once("lib/dkp/dkpUtil.php");
 include_once("lib/dkp/dkpUserPermissions.php");
 /*=================================================
@@ -15,7 +15,7 @@ class pageSetup extends page {
 	function area2()
 	{
 		global $guildset;
-		$this->title = "Íàñòğîéêà WebDKP";
+		$this->title = "ĞĞ°ÑÑ‚Ñ€Ğ¾Ğ¹ĞºĞ° WebDKP";
 		$this->border = 1;
 
 		if($guildset) {
