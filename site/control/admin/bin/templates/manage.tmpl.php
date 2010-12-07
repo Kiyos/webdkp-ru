@@ -6,7 +6,7 @@
 <?php if($canAddPoints){ ?>
 <br />
 <div style="float:right;padding-top:15px;"><?=$filter?></div>
-<input type="button" class="mediumButton" id="AwardButton" onclick="document.location='<?=$baseurl?>Admin/CreateAward'" value="Create Award">
+<input type="button" class="mediumButton" id="AwardButton" onclick="document.location='<?=$baseurl?>Admin/CreateAward'" value="<?=iconv("CP1251", "UTF-8", "Выдать награду")?>">
 <?php } else { ?>
 <div style="float:right;padding-top:15px;"><?=$filter?></div>
 <br />
@@ -16,11 +16,11 @@
 <table class="dkp" id="manageTable" cellpadding=0 cellspacing=0 >
 	<thead>
 	<tr class="header">
-		<th class="link" sorttype="player"><a>Player</a></th>
-		<th class="link center" sorttype="guild" style="width:150px" ><a>Guild</a></th>
-		<th class="link center" sorttype="class" style="width:100px"><a>Class</a></th>
+		<th class="link" sorttype="player"><a><?=iconv("CP1251", "UTF-8", "Игрок")?></a></th>
+		<th class="link center" sorttype="guild" style="width:150px" ><a><?=iconv("CP1251", "UTF-8", "Гильдия")?></a></th>
+		<th class="link center" sorttype="class" style="width:100px"><a><?=iconv("CP1251", "UTF-8", "Класс")?></a></th>
 		<th class="link center" sorttype="dkp" style="width:100px"><a>DKP</a></th>
-		<th class="link center nosort" style="width:200px"><a>Action</a></th>
+		<th class="link center nosort" style="width:200px"><a><?=iconv("CP1251", "UTF-8", "Действие")?></a></th>
 	</tr>
 	</thead>
 	<tbody>
