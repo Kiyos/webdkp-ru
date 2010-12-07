@@ -21,7 +21,7 @@ class pageCreateAward extends pageAdminMain {
 		global $sql;
 		global $siteRoot;
 
-		$this->title = "Create Award";
+		$this->title = iconv("CP1251", "UTF-8", "Выдать награду");
 		$this->border = 1;
 
 		/*$data = array();
@@ -63,7 +63,7 @@ class pageCreateAward extends pageAdminMain {
 		$awardedby = util::getData("awardedby");
 
 		if( !$this->HasPermission("TableAddPoints", $this->tableid) ) {
-			return $this->setAjaxResult(false, "You do not have permission to create awards on this table.");
+			return $this->setAjaxResult(false, iconv("CP1251", "UTF-8", "У вас нет прав на выдачу наград в этой таблице."));
 		}
 
 		$playerids = explode(",", $playerids);
@@ -82,7 +82,7 @@ class pageCreateAward extends pageAdminMain {
 		if($this->settings->GetCombineAltsEnabled())
 			$this->updater->CombineAltsWithMain();
 
-		return $this->setAjaxResult(true, "Award Created");
+		return $this->setAjaxResult(true, iconv("CP1251", "UTF-8", "Награда выдана"));
 	}
 
 	function ajaxCreateItemAward(){
@@ -102,7 +102,7 @@ class pageCreateAward extends pageAdminMain {
 
 		//check permissions
 		if( !$this->HasPermission("TableAddPoints", $this->tableid) ) {
-			return $this->setAjaxResult(false, "You do not have permission to create awards on this table.");
+			return $this->setAjaxResult(false, iconv("CP1251", "UTF-8", "У вас нет прав на выдачу наград в этой таблице."));
 		}
 
 		//create the award
@@ -126,7 +126,7 @@ class pageCreateAward extends pageAdminMain {
 		if($this->settings->GetCombineAltsEnabled())
 			$this->updater->CombineAltsWithMain();
 
-		return $this->setAjaxResult(true, "Award Created");
+		return $this->setAjaxResult(true, iconv("CP1251", "UTF-8", "Награда выдана"));
 	}
 }
 

@@ -8,16 +8,16 @@
 <div id="AwardContent1" style="display:block">
 <table class="dkpForm" >
 <tr>
-	<td><div class="dkpSubtitle">Create Award - Step 1</div></td>
+	<td><div class="dkpSubtitle"><?=iconv("CP1251", "UTF-8", "Выдача награды - Шаг 1")?></div></td>
 </tr>
 <tr>
-	<td>Would you like to award an item or DKP?</td>
+	<td><?=iconv("CP1251", "UTF-8", "Наградить предметом или DKP?")?></td>
 </tr>
 <tr>
 	<td>
-	<input type="button" class="largeButton" onclick="document.location='<?=$baseurl?>Admin/Manage'" value="Cancel" style="width:100px">
-	<input type="button" class="largeButton" onclick="DKPManage.AwardItem()" value="Award Item" style="width:100px">
-	<input type="button" class="largeButton" onclick="DKPManage.AwardGeneral()" value="Award DKP" style="width:100px">
+	<input type="button" class="largeButton" onclick="document.location='<?=$baseurl?>Admin/Manage'" value="<?=iconv("CP1251", "UTF-8", "Отмена")?>" style="width:100px">
+	<input type="button" class="largeButton" onclick="DKPManage.AwardItem()" value="<?=iconv("CP1251", "UTF-8", "Предмет")?>" style="width:100px">
+	<input type="button" class="largeButton" onclick="DKPManage.AwardGeneral()" value="<?=iconv("CP1251", "UTF-8", "DKP")?>" style="width:100px">
 	</td>
 </tr>
 </table>
@@ -27,40 +27,42 @@
 <table class="dkpForm" >
 <tr>
 	<td colspan=2>
-	<div class="dkpSubtitle">Create Award - Step 2</div>
+	<div class="dkpSubtitle"><?=iconv("CP1251", "UTF-8", "Выдача награды - Шаг 2")?>"</div>
 	</td>
 </tr>
 <tr>
 	<td colspan=2>
-	Enter some details about your award.
+	<?=iconv("CP1251", "UTF-8", "Укажите некоторые детали о выдаваемой награде.")?>
 	</td>
 </tr>
 <tr>
-	<td class="label" style="width:180px">Item Name</td>
+	<td class="label" style="width:180px"><?=iconv("CP1251", "UTF-8", "Название предмета")?></td>
 	<td><input tabindex=1 name="itemname" id="item_name" type="text" value="" ></td>
 </tr>
 <tr>
-	<td class="label"><a href="javascript:;" class="tooltip" tooltip="How much DKP this item should cost. Positive numbers only.">Cost</a></td>
+	<!-- подсказка выводится белым цветом - надобы исправить -->
+	<td class="label"><a href="javascript:;" class="tooltip" tooltip="<?=iconv("CP1251", "UTF-8", "Цена данного предмета в DKP. Только положительное число.")?>"><?=iconv("CP1251", "UTF-8", "Стоимость")?></a></td>
 	<td><input tabindex=2 name="cost" id="item_cost" type="text" value=""></td>
 </tr>
 <tr>
-	<td class="label">Give To</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "Выдать игроку")?></td>
 	<td>
 	<select tabindex=3 name="playerselect" id="userdropdown">
 	</select>
 	</td>
 </tr>
 <tr>
-	<td class="label">Location</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "Место (подземелье)")?></td>
 	<td><input tabindex=4 name="location" type="text" id="item_location" value="WebDKP"></td>
 </tr>
 <tr>
-	<td class="label">Awarded By</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "Выдал")?></td>
 	<td><input tabindex=5 name="awardedby" id="item_awardedby" type="text" value="<?=$siteUser->username?>"></td>
 </tr>
 <tr>
 	<td colspan=2>
-	<input type="button" class="largeButton" onclick="DKPManage.StartAward()" value="Back" style="width:100px">
+	<input type="button" class="largeButton" onclick="DKPManage.StartAward()" value="<?=iconv("CP1251", "UTF-8", "Назад")?>" style="width:100px">
+	<!-- надо думать какие будут последсвия переименования кнопки -->
 	<input tabindex=6 type="button" class="largeButton" onclick="DKPManage.AwardItemContinue()" value="<?=($settings->GetZerosumEnabled()?"Select Zerosum":"Award")?>" style="width:100px">
 	</td>
 </tr>
@@ -71,34 +73,34 @@
 <table class="dkpForm" >
 <tr>
 	<td colspan=2>
-	<div class="dkpSubtitle">Create Award - Step 2</div>
+	<div class="dkpSubtitle"><?=iconv("CP1251", "UTF-8", "Выдача награды - Шаг 2")?></div>
 	</td>
 </tr>
 <tr>
 	<td colspan=2>
-	Enter some details about your award.
+	<?=iconv("CP1251", "UTF-8", "Укажите некоторые детали о выдаваемой награде.")?>
 	</td>
 </tr>
 <tr>
-	<td class="label" style="width:180px">Reason</td>
+	<td class="label" style="width:180px"><?=iconv("CP1251", "UTF-8", "Причина")?></td>
 	<td><input tabindex=7 id="award_reason" type="text" value="" ></td>
 </tr>
 <tr>
-	<td class="label"><a href="javascript:;" class="tooltip" tooltip="Enter a positive number to award DKP. Enter a negative number to deduct DKP">Amount</a></td>
+	<td class="label"><a href="javascript:;" class="tooltip" tooltip="<?=iconv("CP1251", "UTF-8", "Положительное значение для награды. Отрицательное значение для штрафа")?>"><?=iconv("CP1251", "UTF-8", "Количество")?></a></td>
 	<td><input tabindex=8 id="award_cost" type="text" value=""></td>
 </tr>
 <tr>
-	<td class="label">Location</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "Место (подземелье)")?></td>
 	<td><input tabindex=9 id="award_location" type="text" value="WebDKP"></td>
 </tr>
 <tr>
-	<td class="label">Awarded By</td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "Выдал")?></td>
 	<td><input tabindex=10 id="award_awardedby" type="text" value="<?=$siteUser->username?>"></td>
 </tr>
 <tr>
 	<td colspan=2>
-	<input type="button" class="largeButton" onclick="DKPManage.StartAward()" value="Back" style="width:100px">
-	<input tabindex=11 type="button" class="largeButton" onclick="DKPManage.SelectRecipients()" value="Select Recipients" style="width:150px">
+	<input type="button" class="largeButton" onclick="DKPManage.StartAward()" value="<?=iconv("CP1251", "UTF-8", "Назад")?>" style="width:100px">
+	<input tabindex=11 type="button" class="largeButton" onclick="DKPManage.SelectRecipients()" value="<?=iconv("CP1251", "UTF-8", "Выбрать игроков")?>" style="width:150px">
 	</td>
 </tr>
 </table>
@@ -109,19 +111,19 @@
 <table class="dkpForm" >
 <tr>
 	<td>
-	<div class="dkpSubtitle" id="selectPlayersTitle">Create Award - Step 3</div>
+	<div class="dkpSubtitle" id="selectPlayersTitle"><?=iconv("CP1251", "UTF-8", "Выдача награды - Шаг 3")?></div>
 	</td>
 </tr>
 <tr>
 	<td id="selectPlayersContent">
-	Select the players who will recieve this award by clicking on their row.
-	Use the filter to quickly find players with a given name.
+	<?=iconv("CP1251", "UTF-8", "Укажите игроков, которые получат эту награду, кликая на строку с именем.")?>
+	<?=iconv("CP1251", "UTF-8", "Используйте фильтр для быстрого поиска игроков.")?>
 	</td>
 </tr>
 <tr>
 	<td colspan=2>
-	<input type="button" class="largeButton" onclick="DKPManage.SelectPlayersBack()" value="Back" style="width:100px">
-	<input type="button" class="largeButton" onclick="DKPManage.SelectPlayersForward()" value="Award" style="width:100px">
+	<input type="button" class="largeButton" onclick="DKPManage.SelectPlayersBack()" value="<?=iconv("CP1251", "UTF-8", "Назад")?>" style="width:100px">
+	<input type="button" class="largeButton" onclick="DKPManage.SelectPlayersForward()" value="<?=iconv("CP1251", "UTF-8", "Наградить")?>" style="width:100px">
 	</td>
 </tr>
 <tr>
@@ -129,7 +131,7 @@
 	<table class="dkp" id="selecttable" cellpadding=0 cellspacing=0 >
 		<thead>
 		<tr class="header">
-			<th class="link"><a>Players</a></th>
+			<th class="link"><a><?=iconv("CP1251", "UTF-8", "Игроки")?></a></th>
 		</tr>
 		</thead>
 		<tbody>
@@ -152,7 +154,7 @@
 <div id="AwardContentFinished" style="display:none">
 <table class="dkpForm" >
 <tr>
-	<td><div class="dkpSubtitle" id="awardFinishedTitle">Players Awarded</div></td>
+	<td><div class="dkpSubtitle" id="awardFinishedTitle"><?=iconv("CP1251", "UTF-8", "Награда выдана")?></div></td>
 </tr>
 <tr>
 	<td>
@@ -162,7 +164,7 @@
 </tr>
 <tr>
 	<td>
-	<input type="button" class="largeButton" onclick="document.location='<?=$baseurl?>Admin/Manage'" value="Continue" style="width:100px">
+	<input type="button" class="largeButton" onclick="document.location='<?=$baseurl?>Admin/Manage'" value="<?=iconv("CP1251", "UTF-8", "Продолжить")?>" style="width:100px">
 	</td>
 </tr>
 </table>
