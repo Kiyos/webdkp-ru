@@ -15,7 +15,7 @@ class pageUpload extends pageAdminMain {
 	{
 		global $sql;
 
-		$this->title = "Upload Log File";
+		$this->title = iconv("CP1251", "UTF-8", "Çàãğóçêà ëîã-ôàéëà");
 		$this->border = 1;
 
 		$this->set("log", $this->log);
@@ -25,7 +25,7 @@ class pageUpload extends pageAdminMain {
 	function eventUploadLog(){
 
 		if(!$this->canUploadLog ) {
-			return $this->setEventResult(false,"You do not have permission to upload a log file.");
+			return $this->setEventResult(false, iconv("CP1251", "UTF-8", "Ó âàñ íåò ïğàâ çàãğóæàòü ëîã-ôàéë."));
 		}
 		$uploader = new dkpUploader();
 		$this->log = $uploader->UploadLog($this->guild->id);

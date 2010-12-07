@@ -15,7 +15,7 @@ class pageDownload extends pageAdminMain {
 	{
 		global $sql;
 
-		$this->title = "Download Log File";
+		$this->title = iconv("CP1251", "UTF-8", "Скачать лог-файл");
 		$this->border = 1;
 
 		$this->set("log", $this->log);

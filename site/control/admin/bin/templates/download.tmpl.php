@@ -4,14 +4,14 @@
 <br />
 <div class="adminContents">
 
-Here you can download your WebDKP data into a .lua file for the in game addon.
-This allows you to access all your latest DKP information directly in game. Be
-sure to upload any of your in game changes first before downloading new data.
+<?=iconv("CP1251", "UTF-8", "Здесь вы можете скачать последние WebDKP данные в .lua файл для аддона. ")?>
+<?=iconv("CP1251", "UTF-8", "Это позволит вам иметь доступ к последней DKP информации прямо в игре. ")?>
+<?=iconv("CP1251", "UTF-8", "Удостоверьтесь, что загрузили последнюю игровую информацию перед скачиванием новых данных.")?>
 <br />
 <br />
-<div class="noticeMessage">You want to save your data file to:
+<div class="noticeMessage"><?=iconv("CP1251", "UTF-8", "Вы должны сохранить .lua файл в папку:")?>
 <b>World of Warcraft\WTF\Account\USERNAME\SavedVariables\WebDKP.lua</b></div>
 <br />
-<input type="button" class="largeButton" value="Download" onclick="document.location='<?=$baseurl?>/log'">
+<input type="button" class="largeButton" value="<?=iconv("CP1251", "UTF-8", "Скачать")?>" onclick="document.location='<?=$baseurl?>/log'">
 
 </div>
