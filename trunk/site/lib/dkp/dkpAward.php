@@ -74,7 +74,7 @@ class dkpAward {
 		$this->playercount = $row["playercount"];
 		$this->points = $row["points"];
 		$this->points = str_replace(".00", "", $this->points);
-		$this->reason = $row["reason"];
+		$this->reason = $row["reason"]; //iconv("CP1251", "UTF-8", $row["reason"]);
 		$this->location = $row["location"];
 		$this->awardedby = $row["awardedby"];
 		$this->date = $row["date"];

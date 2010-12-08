@@ -41,7 +41,7 @@ class pagePlayer extends pageDkpMain {
 		if($player->id == "") {
 			$this->title = $this->guild->name." - ".iconv("CP1251", "UTF-8", "Неизвестный игрок");
 			$this->border = 1;
-			return "$playername".iconv("CP1251", "UTF-8", " отсутствует в таблице этой гильдии.");
+			return "$playername".iconv("CP1251", "UTF-8", " Отсутствует в таблице этой гильдии.");
 		}
 
 		$this->title = $this->guild->name." - ".$player->name;

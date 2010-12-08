@@ -85,7 +85,7 @@ class pageEditAward extends pageAdminMain {
 			$this->set("players", $players);
 			$this->set("award", $award);
 			$edittype = "normal";
-			$this->title = "Edit Award";
+			$this->title = iconv("CP1251", "UTF-8", "Изменение награды");
 		}
 
 		//set the title

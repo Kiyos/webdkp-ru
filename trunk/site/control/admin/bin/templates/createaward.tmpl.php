@@ -52,11 +52,11 @@
 	</td>
 </tr>
 <tr>
-	<td class="label"><?=iconv("CP1251", "UTF-8", "Ìוסעמ (ןמהחולוכüו)")?></td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "Ãומדנאפטÿ סמבûעטÿ")?></td>
 	<td><input tabindex=4 name="location" type="text" id="item_location" value="WebDKP"></td>
 </tr>
 <tr>
-	<td class="label"><?=iconv("CP1251", "UTF-8", "Âûהאכ")?></td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "Íאדנאהטכ")?></td>
 	<td><input tabindex=5 name="awardedby" id="item_awardedby" type="text" value="<?=$siteUser->username?>"></td>
 </tr>
 <tr>
@@ -90,11 +90,11 @@
 	<td><input tabindex=8 id="award_cost" type="text" value=""></td>
 </tr>
 <tr>
-	<td class="label"><?=iconv("CP1251", "UTF-8", "Ìוסעמ (ןמהחולוכüו)")?></td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "Ãומדנאפטÿ סמבûעטÿ")?></td>
 	<td><input tabindex=9 id="award_location" type="text" value="WebDKP"></td>
 </tr>
 <tr>
-	<td class="label"><?=iconv("CP1251", "UTF-8", "Âûהאכ")?></td>
+	<td class="label"><?=iconv("CP1251", "UTF-8", "Íאדנאהטכ")?></td>
 	<td><input tabindex=10 id="award_awardedby" type="text" value="<?=$siteUser->username?>"></td>
 </tr>
 <tr>
