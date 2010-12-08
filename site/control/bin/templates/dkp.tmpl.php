@@ -3,20 +3,20 @@
 <?=$tableselect?>
 <br />
 <?php if(sizeof($data) == 0) { ?>
-This table is empty. Upload a log file or manually add DKP from the control center.
+<?=iconv("CP1251", "UTF-8", "Эта таблица пуста. Загрузите лог файл или вручнуб добавьте DKP из панели управления.")?>
 <?php } else { ?>
 <table class="dkp" cellpadding=0 cellspacing=0 id="dkptable">
 <thead>
 <tr class="header">
-	<th class="link" sorttype="player"><a>name</a></th>
-	<th class="link center" style="width:200px" sorttype="guild"><a>guild</a></th>
-	<th class="link center" style="width:100px" sorttype="class"><a>class</th>
-	<th class="link center" style="width:100px" sorttype="dkp"><a>dkp</a></th>
+	<th class="link" sorttype="player"><a><?=iconv("CP1251", "UTF-8", "Игрок")?></a></th>
+	<th class="link center" style="width:200px" sorttype="guild"><a><?=iconv("CP1251", "UTF-8", "Гильдия")?></a></th>
+	<th class="link center" style="width:100px" sorttype="class"><a><?=iconv("CP1251", "UTF-8", "Класс")?></th>
+	<th class="link center" style="width:100px" sorttype="dkp"><a>Dkp</a></th>
 	<?php if($settings->GetLifetimeEnabled()){ ?>
-	<th class="link center" style="width:100px" sorttype="lifetime"><a>lifetime</a></th>
+	<th class="link center" style="width:100px" sorttype="lifetime"><a><?=iconv("CP1251", "UTF-8", "Общее")?></a></th>
 	<?php } ?>
 	<?php if($settings->GetTiersEnabled()){ ?>
-	<th class="link center" style="width:100px" sorttype="tier"><a>tier</a></th>
+	<th class="link center" style="width:100px" sorttype="tier"><a><?=iconv("CP1251", "UTF-8", "Тир")?></a></th>
 	<?php } ?>
 </tr>
 </thead>

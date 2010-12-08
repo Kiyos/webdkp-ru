@@ -4,7 +4,7 @@
 <?php } else { ?>
 <table class="dkpForm">
 <tr>
-	<td><b><?=($award->foritem?iconv("CP1251", "UTF-8", "Имя предмета"):iconv("CP1251", "UTF-8", "Повод"))?></b></td>
+	<td><b><?=($award->foritem?iconv("CP1251", "UTF-8", "Имя предмета"):iconv("CP1251", "UTF-8", "Сумма"))?></b></td>
 	<td><?=($award->foritem == 1?$award->points*-1:$award->points)?></td>
 </tr>
 <tr>
@@ -26,7 +26,7 @@
 	<td><?=$award->dateDate?> - <?=$award->dateTime?></td>
 </tr>
 <tr>
-	<td><b><?=iconv("CP1251", "UTF-8", "Кто наградил")?></b></td>
+	<td><b><?=iconv("CP1251", "UTF-8", "Наградил")?></b></td>
 	<td><?=$award->awardedby?></td>
 </tr>
 <?php if($award->foritem == 0) { ?>
@@ -38,7 +38,7 @@
 <?php if($canedit) { ?>
 <tr>
 	<td colspan=2>
-		<input type="button" class="largeButton" value="<?=iconv("CP1251", "UTF-8", "Изменить награду")?>" onclick="document.location='<?=$baseurl?>/Admin/EditAward/<?=$award->id?>?b=e&aid=<?=$award->id?>'" style="width:100px">
+		<input type="button" class="largeButton" value="<?=iconv("CP1251", "UTF-8", "Изменить")?>" onclick="document.location='<?=$baseurl?>/Admin/EditAward/<?=$award->id?>?b=e&aid=<?=$award->id?>'" style="width:100px">
 	</td>
 </tr>
 <?php } ?>

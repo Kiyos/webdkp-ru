@@ -2,12 +2,12 @@
 <br />
 <?php if($award->id == ""){ ?>
 <br />
-Invalid Award ID. Could not load award information from the database.
+<?=iconv("CP1251", "UTF-8", "Неверный идентификатор награды. Невозможно загрузить информацию о награде из базы данных.")?>
 <?php } else if(!$canedit) { ?>
-You do not have permission to edit awards.
+<?=iconv("CP1251", "UTF-8", "У вас нет прав для редактирования наград.")?>
 <br />
 <br />
-<input type="button" class="largeButton" value="Back" onclick="document.location='<?=$backurl?>'">
+<input type="button" class="largeButton" value="<?=iconv("CP1251", "UTF-8", "Вернуться")?>" onclick="document.location='<?=$backurl?>'">
 <?php } else { ?>
 
 <form action="<?=$baseurl?>Admin/EditAward/<?=$award->id?>" method="post" name="editaward">
@@ -17,18 +17,18 @@ You do not have permission to edit awards.
 
 <table class="dkpForm">
 <tr>
-	<td class="label"  style="width:170px"><b><?=($award->foritem?"Item Name":"Reason")?></b></td>
+	<td class="label"  style="width:170px"><b><?=($award->foritem?"Item Name":iconv("CP1251", "UTF-8", "Причина"))?></b></td>
 	<td><input type="text" name="reason" value="<?=$award->reason?>" style="width:250px"></td>
 </tr>
 <tr>
-	<td class="label"><b><?=($award->foritem == 1?"Cost":"Points")?></b></td>
+	<td class="label"><b><?=($award->foritem == 1?"Cost":iconv("CP1251", "UTF-8", "Очки Dkp"))?></b></td>
 	<td><input type="text" name="points" value="<?=($award->foritem == 1?$award->points*-1:$award->points)?>" style="width:250px">
 		<?=($award->foritem == 1 ? "( Positive Number )" : "")?>
 	</td>
 </tr>
 <?php if($award->foritem == 1) { ?>
 <tr>
-	<td class="label"><b>Awarded To</b></td>
+	<td class="label"><b><?=iconv("CP1251", "UTF-8", "Награждён")?></b></td>
 	<td>
 	<select name="player" style="width:260px">
 	<?php foreach($players as $temp){ ?>
@@ -39,7 +39,7 @@ You do not have permission to edit awards.
 </tr>
 <?php } ?>
 <tr>
-	<td class="label"><b>Table</b></td>
+	<td class="label"><b><?=iconv("CP1251", "UTF-8", "Таблица")?></b></td>
 	<td>
 	<select name="awardtable" style="width:260px">
 	<?php foreach($awardtables as $table) { ?>
@@ -49,35 +49,35 @@ You do not have permission to edit awards.
 	</td>
 </tr>
 <tr>
-	<td class="label"><b>Award Type</b></td>
+	<td class="label"><b><?=iconv("CP1251", "UTF-8", "Тип награды")?></b></td>
 	<td>
 	<select name="foritem" style="width:260px">
-		<option value="0">Regular Award</option>
-		<option value="1" <?=($award->foritem==1?"selected":"")?>>Item Award</option>
+		<option value="0"><?=iconv("CP1251", "UTF-8", "Очки Dkp")?></option>
+		<option value="1" <?=($award->foritem==1?"selected":"")?>><?=iconv("CP1251", "UTF-8", "Предмет")?></option>
 	</select>
 	</td>
 </tr>
 <tr>
-	<td  class="label"><b>Location</b></td>
+	<td  class="label"><b><?=iconv("CP1251", "UTF-8", "География события")?></b></td>
 	<td><input type="text" name="location" value="<?=$award->location?>" style="width:250px"></td>
 </tr>
 <tr>
-	<td class="label"><b>Awarded By</b></td>
+	<td class="label"><b><?=iconv("CP1251", "UTF-8", "Наградил")?></b></td>
 	<td><input type="text" name="awardedby" value="<?=$award->awardedby?>" style="width:250px"></td>
 </tr>
 <tr>
-	<td class="label"><b>Date</b></td>
+	<td class="label"><b><?=iconv("CP1251", "UTF-8", "Дата события")?></b></td>
 	<td><?=$award->dateDate?> - <?=$award->dateTime?></td>
 </tr>
 <tr>
-	<td class="label"><b># of Players</b></td>
+	<td class="label"><b><?=iconv("CP1251", "UTF-8", "Кол-во игроков")?></b></td>
 	<td><?=$award->playercount?></td>
 </tr>
 <tr>
 	<td></td>
 	<td>
-		<input type="button" class="largeButton" value="Back" onclick="document.location='<?=$backurl?>'" style="width:100px">
-		<input type="button" class="largeButton" value="Save Changes" onclick="Util.Submit('editaward')"  style="width:160px">
+		<input type="button" class="largeButton" value="<?=iconv("CP1251", "UTF-8", "Вернуться")?>" onclick="document.location='<?=$backurl?>'" style="width:100px">
+		<input type="button" class="largeButton" value="<?=iconv("CP1251", "UTF-8", "Сохранить")?>" onclick="Util.Submit('editaward')"  style="width:160px">
 	</td>
 </tr>
 <tr>
@@ -94,7 +94,7 @@ You do not have permission to edit awards.
 <table class="dkp" id="selecttable" cellpadding=0 cellspacing=0 >
 	<thead>
 	<tr class="header">
-		<th class="link" colspan=5><a>Receiving Players</a></th>
+		<th class="link" colspan=5><a><?=iconv("CP1251", "UTF-8", "Игроки получающие награду")?></a></th>
 	</tr>
 	</thead>
 	<tbody>
