@@ -181,7 +181,16 @@ class dkpUploader {
 		//create an award instance for this entry
 		$award = new dkpAward();
 		$award->guild = $guild->id;
-		$award->reason = $entry["reason"];
+		
+		if($entry["foritem"] == "true" ? 1 : 0) {
+			preg_match("/\|\w{9}\|Hitem:(?<id>\d*)\:/", $entry["itemlink"], $itemid);
+			$award->reason = $itemid[id];
+			}
+		else
+			{
+			$award->reason = $entry["reason"];
+			}	
+		
 		$award->awardedby = $entry["awardedby"];
 		$award->location = $entry["zone"];
 		$award->date = $entry["date"];
