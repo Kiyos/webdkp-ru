@@ -14,7 +14,7 @@
  	<script src="<?=$SiteRoot?>js/scriptaculous/src/scriptaculous.js" type="text/javascript"></script>
  	<script src="<?=$SiteRoot?>js/lightbox/lightbox.js" type="text/javascript"></script>
  	<script src="<?=$SiteRoot?>js/dkp.js" type="text/javascript"></script>
- 	<script src="<?=$SiteRoot?>js/power.js" type="text/javascript"></script>
+	<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
  	<?=$extraHeaders?>
 </head>
 <body>
