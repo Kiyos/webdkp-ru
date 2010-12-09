@@ -45,7 +45,7 @@ class itemcache {
 	{
 		global $sql;
 		$name = sql::Escape($name);
-		$row = $sql->QueryRow("SELECT * FROM $this->tablename WHERE name='$name'");
+		$row = $sql->QueryRow("SELECT * FROM $this->tablename WHERE itemid='$name'");
 		$this->loadFromRow($row);
 	}
 
@@ -127,7 +127,7 @@ class itemcache {
 		global $sql;
 		$name = sql::Escape($name);
 		$tablename = itemcache::tablename;
-		$exists = $sql->QueryItem("SELECT id FROM $tablename WHERE name='$name'");
+		$exists = $sql->QueryItem("SELECT id FROM $tablename WHERE itemid='$name'");
 		return ($exists != "");
 	}
 	/*===========================================================
