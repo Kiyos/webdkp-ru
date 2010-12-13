@@ -38,10 +38,10 @@ define('SITE', dirname(dirname(__FILE__).DS). DS ."site".DS);
 define('WEBROOT', SITE . "webroot" . DS );
 
 //set the include path
-$result = ini_set('include_path', ini_get('include_path') . PATH_SEPARATOR .
+$result = ini_set('include_path', ',' . PATH_SEPARATOR .
 		CORE . PATH_SEPARATOR .
 		ROOT . PATH_SEPARATOR .
-		SITE . PATH_SEPARATOR );
+		SITE);
 
 //import the configuration settings
 include("config/config.php");
