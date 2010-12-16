@@ -30,16 +30,14 @@ function AlphanumericURLEncode($inputString)
 }
 
 class armory {
-	const americanUrl = "http://www.wowarmory.com/"; // с / в конце!
-	const euroUrl = "http://eu.wowarmory.com/"; // с / в конце!
 
-	const AMERICAN = 0;
+	const euroUrl = "http://eu.wowarmory.com/"; // с / в конце!
 	const EURO = 1;
 
   /**
    * Returns an array of players in a guild with the given ID from the armory.
    */
-	function GetPlayersInGuild($guild, $armorySite = armory::AMERICAN){
+	function GetPlayersInGuild($guild, $armorySite = armory::EURO){
 		if(!is_a($guild,"dkpGuild")) {
 
 			$guildid = $guild;
@@ -56,7 +54,7 @@ class armory {
    * Returns a URL that can be used to download stats for a guild with the
    * given id.
    */
-	function GetArmoryUrl($guild, $armorySite = armory::AMERICAN){
+	function GetArmoryUrl($guild, $armorySite = armory::EURO){
 		if(!is_a($guild,"dkpGuild")) {
 
 			$guildid = $guild;
@@ -72,11 +70,9 @@ class armory {
    * Returns a URL that can be used to download status for a guild with the
    * given name.
    */
-	function GetArmoryUrlByName($guildname, $server, $armorySite = armory::AMERICAN){
-		if($armorySite == armory::AMERICAN)
-			$base = armory::americanUrl;
-		else
-			$base = armory::euroUrl;
+	function GetArmoryUrlByName($guildname, $server, $armorySite = armory::EURO){
+
+		$base = armory::euroUrl;
 
 		$server = stripslashes($server);
 		$guildname = stripslashes($guildname);
@@ -91,7 +87,7 @@ class armory {
    * Returns an array of all players that belong to the guild on the given
    * server.
    */
-	function GetPlayersInGuildByName($guildname, $server, $armorySite = armory::AMERICAN ) {
+	function GetPlayersInGuildByName($guildname, $server, $armorySite = armory::EURO ) {
 
 		$toReturn = array();
 

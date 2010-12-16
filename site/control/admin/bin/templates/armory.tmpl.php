@@ -43,10 +43,7 @@
 <tr>
 	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "—ервер ќружейной:")?></td>
 	<td>
-		<select name="wowserver">
-			<option value="<?=armory::AMERICAN?>"><?=iconv("CP1251", "UTF-8", "американский")?></option>
-			<option value="<?=armory::EURO?>"><?=iconv("CP1251", "UTF-8", "европейский (в т.ч. русский)")?></option>
-		</select>
+		<input name="wowserver" type="text" value="<?=iconv("CP1251", "UTF-8", "европейский (в т.ч. русский)")?>">
 	</td>
 </tr>
 <tr>
