@@ -3,7 +3,7 @@
 <div class="adminArea">
 <div class="adminTitle"><img src="<?=$siteRoot?>images/dkp/tasks.gif"><?=iconv("CP1251", "UTF-8", " Задачи")?></div>
 <div class="adminLinks">
-	<a href="<?=$baseurl?>Admin/Manage"><?=iconv("CP1251", "UTF-8", "Редактирование таблиц DKP")?></a> <br />
+	<a href="<?=$baseurl?>Admin/Manage"><?=iconv("CP1251", "UTF-8", "Изменение DKP игроков")?></a> <br />
 	<?php if($canUploadLog){ ?>
 	<a href="<?=$baseurl?>Admin/Upload"><?=iconv("CP1251", "UTF-8", "Загрузка лог-файла")?></a> <br />
 	<?php } ?>
@@ -39,7 +39,7 @@
 	<a href="<?=$baseurl?>Admin/Settings"><?=iconv("CP1251", "UTF-8", "Основные опции")?></a> <br />
 	<?php } ?>
 	<?php if($canManageDKPTables) { ?>
-	<a href="<?=$baseurl?>Admin/DKPTables"><?=iconv("CP1251", "UTF-8", "Создание и удаление таблиц DKP")?></a> <br />
+	<a href="<?=$baseurl?>Admin/DKPTables"><?=iconv("CP1251", "UTF-8", "Таблицы DKP")?></a> <br />
 	<?php } ?>
 	<?php if($canManageLootTable) { ?>
 	<a href="<?=$baseurl?>Admin/LootTable"><?=iconv("CP1251", "UTF-8", "Таблица лута")?></a> <br />

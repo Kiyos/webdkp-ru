@@ -11,15 +11,15 @@
 
 <div class="adminSectionImage"><img src="<?=$siteRoot?>images/dkp/tables.gif"></div>
 <div class="adminSection" style="padding-left:2px">
-	<div class="title">DKP Tables</div>
+	<div class="title"><?=iconv("CP1251", "UTF-8", "DKP таблицы")?></div>
 
 	<form action="<?=$baseurl?>Admin/DkpTables" method="post" name="createTable">
 	<input type="hidden" name="event" value="createTable">
 	<table class="dkp simpletable" id="tablelist" cellpadding="0" cellspacing="0">
 		<tr class="header">
-			<th>Table Name</th>
+			<th><?=iconv("CP1251", "UTF-8", "Имя таблицы")?></th>
 			<th class="center">ID</th>
-			<th class="center">Action</th>
+			<th class="center"><?=iconv("CP1251", "UTF-8", "Действие")?></th>
 		</tr>
 		<?php foreach($tables as $table) { ?>
 		<tr>
@@ -27,10 +27,10 @@
 			<td class="center" style="width:100px"><?=$table->tableid?></td>
 			<td class="center middle" style="width:150px">
 
-				<a class="dkpbutton" href="<?=$baseurl?>Admin/EditDkpTable?id=<?=$table->tableid?>"><img title="Edit Account" src="<?=$siteRoot?>images/buttons/edit.png"></a>
+				<a class="dkpbutton" href="<?=$baseurl?>Admin/EditDkpTable?id=<?=$table->tableid?>"><img title="<?=iconv("CP1251", "UTF-8", "Изменить")?>" src="<?=$siteRoot?>images/buttons/edit.png"></a>
 				<a class="dkpbutton" href="<?=$baseurl?>Admin/DeleteTable?id=<?=$table->tableid?>"
-				onclick="return confirm('Are you sure that you want to delete this table?\nALL DATA WILL BE LOST!')">
-				<img title="Delete Account" src="<?=$siteRoot?>images/buttons/delete.png"></a>
+				onclick="return confirm('<?=iconv("CP1251", "UTF-8", "Вы действительно хотите удалить эту таблицу?\nВСЕ ДАННЫЕ БУДУТ СТЁРТЫ!")?>')">
+				<img title="<?=iconv("CP1251", "UTF-8", "Удалить")?>" src="<?=$siteRoot?>images/buttons/delete.png"></a>
 			</td>
 		</tr>
 		<?php } ?>
@@ -40,7 +40,7 @@
 			</td>
 			<td class="center">
 				<img src="<?=$siteRoot?>images/buttons/new.png">
-				<a href="javascript:Util.Submit('createTable')">Create Table</a>
+				<a href="javascript:Util.Submit('createTable')"><?=iconv("CP1251", "UTF-8", "Создать таблицу")?></a>
 			</td>
 		</tr>
 	</table>
@@ -52,18 +52,18 @@
 
 <div class="adminSectionImage"><img src="<?=$siteRoot?>images/dkp/info.gif"></div>
 <div class="adminSection" style="padding-left:2px">
-	<div class="title">About DKP Tables</div>
-	<b>You should read this! Or you might lose data :(</b>
+	<div class="title"><?=iconv("CP1251", "UTF-8", "Относительно DKP таблиц")?></div>
+	<b><?=iconv("CP1251", "UTF-8", "Вы должны прочитать это! Или вы рискуете потерять данные :(")?></b>
 	<br />
-	Here you can view a list of all your guild's DKP Tables. Your guild can have many tables,
-	which can help make your DKP easier to manage. For example, some guilds keep seperate
-	tables for 5 and 25 man runs while others keep seperate tables for each type
-	of raid. When you create multiple tables, a drop down will appear both on the site
-	and in the in-game addon that allows you to select what table you wish to work with.
+	<?=iconv("CP1251", "UTF-8", "Здесь вы видите список DKP таблиц вашей гильдии. Ваша гильдия может иметь несколько таблиц,")?>
+	<?=iconv("CP1251", "UTF-8", "которые помогут вам легче управлять DKP. Например, некоторые гильдии хранят отдельно")?>
+	<?=iconv("CP1251", "UTF-8", "таблицы для 10 и 25 ппл рейдов, другие гильдии разделяют таблицы для каждого ")?>
+	<?=iconv("CP1251", "UTF-8", "типа рейдов. При создании нескольких таблиц, на сайте и в аддоне появится выпадающий ")?>
+	<?=iconv("CP1251", "UTF-8", "список, который позволит вам выбрать таблицу с которой вы хотите работать.")?>
 	<br />
 	<br />
-	From this page you can edit, delete, and create new DKP Tables. Be <b>very careful</b>
-	when you delete tables. If you delete a table, you delete all the information in it to!
+	<?=iconv("CP1251", "UTF-8", "На этой странице вы можете изменить, удалить или создать DKP таблицу. Будьте <b>очень осторожны</b>")?>
+	<?=iconv("CP1251", "UTF-8", "когда удаляете таблицы. Если вы удалите таблицу, вы удалите всю информацию в ней тоже!")?>
 
 </div>
 
