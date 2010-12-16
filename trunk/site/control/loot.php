@@ -19,8 +19,8 @@ class pageLoot extends pageDkpMain {
 	{
 		global $sql;
 
-		$this->pagetitle .= " - Loot ";
-		$this->title = $this->guild->name." Loot";
+		$this->pagetitle .= iconv("CP1251", "UTF-8", " - лут");
+		$this->title = $this->guild->name.iconv("CP1251", "UTF-8", " &mdash; лут");
 		$this->border = 1;
 
 		$this->LoadPageVars("loot");

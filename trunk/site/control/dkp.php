@@ -36,7 +36,7 @@ class pageDkp extends pageDkpMain {
 		global $sql;
 
 		$this->pagetitle .= " - DKP ";
-		$this->title = $this->guild->name." DKP";
+		$this->title = $this->guild->name." &mdash; DKP";
 		$this->border = 1;
 
 		$filters = $this->CombineDKPFilters("main");

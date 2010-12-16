@@ -19,8 +19,8 @@ class pageAwards extends pageDkpMain {
 		global $sql;
 		global $siteUser;
 
-		$this->pagetitle .= " - Awards ";
-		$this->title = $this->guild->name." Awards";
+		$this->pagetitle .= iconv("CP1251", "UTF-8", " - Награды");
+		$this->title = $this->guild->name.iconv("CP1251", "UTF-8", " &mdash; награды");
 		$this->border = 1;
 
 		$this->LoadPageVars("all");

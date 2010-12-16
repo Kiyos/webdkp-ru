@@ -4,13 +4,13 @@
 <br />
 <div class="adminContents">
 
-<?=iconv("CP1251", "UTF-8", "Здесь вы можете скачать последние WebDKP данные в .lua файл для аддона. ")?>
-<?=iconv("CP1251", "UTF-8", "Это позволит вам иметь доступ к последней DKP информации прямо в игре. ")?>
-<?=iconv("CP1251", "UTF-8", "Удостоверьтесь, что загрузили последнюю игровую информацию перед скачиванием новых данных.")?>
+<?=iconv("CP1251", "UTF-8", "Здесь вы можете скачать последние данные с сайта в виде лог-файла для аддона. ")?>
+<?=iconv("CP1251", "UTF-8", "Это позволит вам иметь доступ к текущей информации о DKP прямо в игре. ")?>
+<?=iconv("CP1251", "UTF-8", "Перед скачиванием удостоверьтесь, что информация на сайте отражает текущее состояние.")?>
 <br />
 <br />
-<div class="noticeMessage"><?=iconv("CP1251", "UTF-8", "Вы должны сохранить .lua файл в папку:")?>
-<b>World of Warcraft\WTF\Account\USERNAME\SavedVariables\WebDKP.lua</b></div>
+<div class="noticeMessage"><?=iconv("CP1251", "UTF-8", "Вы должны сохранить скачиваемый файл WebDKP.lua в папку: 
+<b>WTF\Account\ИМЯ_УЧЕТНОЙ_ЗАПИСИ\SavedVariables\</b>")?></div>
 <br />
 <input type="button" class="largeButton" value="<?=iconv("CP1251", "UTF-8", "Скачать")?>" onclick="document.location='<?=$baseurl?>/log'">
 

@@ -2,7 +2,7 @@
 <?=$tableselect?>
 <br />
 <?php if(sizeof($awards) == 0 ) { ?>
-There are no awards in this table.
+<?=iconv("CP1251", "UTF-8", "Наград нет.");?>
 <?php } else { ?>
 <table class="dkp" cellpadding=0 cellspacing=0 id="dkptable">
 <thead>

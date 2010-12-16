@@ -19,7 +19,7 @@ class pageIndex extends pageAdminMain {
 	{
 		global $sql;
 
-		$this->title = $this->guild->name." Control Center";
+		$this->title = $this->guild->name.iconv("CP1251", "UTF-8", " &mdash; центр управления");
 		$this->border = 1;
 
 		return $this->fetch("main.tmpl.php");
