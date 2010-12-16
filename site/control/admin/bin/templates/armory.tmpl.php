@@ -18,19 +18,19 @@
 <input type="hidden" name="event" value="sync">
 <table class="dkpForm">
 <tr>
-	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "Гильдия:")?></td>
+	<td class="label" style="width:300px"><?=iconv("CP1251", "UTF-8", "Гильдия:")?></td>
 	<td><input name="guild" type="text" value="<?=$guild->name?>"></td>
 </tr>
 <tr>
-	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "Игровой мир:")?></td>
+	<td class="label" style="width:300px"><?=iconv("CP1251", "UTF-8", "Игровой мир:")?></td>
 	<td><input name="server" type="text" value="<?=$guild->server?>" ></td>
 </tr>
 <tr>
-	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "Минимальный уровень игрока:")?></td>
-	<td><input name="level" type="text" value="80"></td>
+	<td class="label" style="width:300px"><?=iconv("CP1251", "UTF-8", "Минимальный уровень игрока:")?></td>
+	<td><input name="level" type="text" value="85"></td>
 </tr>
 <tr>
-	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "Синхронизировать с:")?></td>
+	<td class="label" style="width:300px"><?=iconv("CP1251", "UTF-8", "Синхронизировать с:")?></td>
 	<td>
 		<select name="table">
 			<option value="0"><?=iconv("CP1251", "UTF-8", "всеми таблицами DKP")?></option>
@@ -38,12 +38,6 @@
 			<option value="<?=$table->tableid?>"><?=$table->name?></option>
 			<?php } ?>
 		</select>
-	</td>
-</tr>
-<tr>
-	<td class="label" style="width:200px"><?=iconv("CP1251", "UTF-8", "Сервер Оружейной:")?></td>
-	<td>
-		<input name="wowserver" type="text" value="<?=iconv("CP1251", "UTF-8", "европейский (в т.ч. русский)")?>">
 	</td>
 </tr>
 <tr>
