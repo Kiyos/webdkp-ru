@@ -17,7 +17,7 @@ class pageDkpTables extends pageAdminMain {
 	{
 		global $siteRoot;
 
-		$this->title = "DKP Tables";
+		$this->title = iconv("CP1251", "UTF-8", "Таблицы DKP");
 		$this->border = 1;
 
 		$updater = new dkpUpdater($this->guild->id);
@@ -36,7 +36,7 @@ class pageDkpTables extends pageAdminMain {
 	function eventCreateTable(){
 		$name = util::getData("name");
 		if($name == "")
-			return $this->setEventResult(false, "Table name cannot be blank.");
+			return $this->setEventResult(false, iconv("CP1251", "UTF-8", "Имя таблицы не может быть пустым."));
 
 		$updater = new dkpUpdater($this->guild->id);
 		$result = $updater->CreateTable($name);
@@ -44,7 +44,7 @@ class pageDkpTables extends pageAdminMain {
 		if($result != dkpUpdater::UPDATE_OK)
 			$this->setEventResult(false, dkpUpdater::GetErrorString($result));
 		else
-			$this->setEventResult(true,"Table Created!");
+			$this->setEventResult(true, iconv("CP1251", "UTF-8", "Таблица создана!"));
 	}
 
 	/*=================================================
@@ -62,9 +62,9 @@ class pageDkpTables extends pageAdminMain {
 			$tables = $updater->GetTables(false);
 			//if they deleted their final table, a new empty one will be created for them later during the page load process
 			if(sizeof($tables) == 0)
-				$this->setEventResult(true,"Table Deleted! Since you have no more tables left, a new one has automatically been created for you.");
+				$this->setEventResult(true, iconv("CP1251", "UTF-8","Таблица удалена! Поскольку больше таблиц нет, для вас автоматически создана новая."));
 			else
-				$this->setEventResult(true,"Table Deleted!");
+				$this->setEventResult(true, iconv("CP1251", "UTF-8", "Таблица удалена!"));
 		}
 	}
 

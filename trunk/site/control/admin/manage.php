@@ -43,7 +43,7 @@ class pageManage extends pageAdminMain {
 		global $sql;
 		global $siteRoot;
 
-		$this->title = iconv("CP1251", "UTF-8", "Управление DKP");
+		$this->title = iconv("CP1251", "UTF-8", "Изменение DKP игроков");
 		$this->border = 1;
 
 

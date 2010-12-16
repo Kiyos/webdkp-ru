@@ -2,7 +2,7 @@
 <ul>
 	<li><a href="#"><?=iconv("CP1251", "UTF-8", " Задачи")?></a>
 		<ul id="subnavlist">
-			<li <?=($self=="manage"?"class='active'":"")?>><a href="<?=$baseurl?>Admin/Manage"><?=iconv("CP1251", "UTF-8", "Редактирование таблиц DKP")?></a></li>
+			<li <?=($self=="manage"?"class='active'":"")?>><a href="<?=$baseurl?>Admin/Manage"><?=iconv("CP1251", "UTF-8", "Изменение DKP игроков")?></a></li>
 			<?php if($canUploadLog){ ?>
 			<li <?=($self=="upload"?"class='active'":"")?>><a href="<?=$baseurl?>Admin/Upload"><?=iconv("CP1251", "UTF-8", "Загрузка лог-файла")?></a></li>
 			<?php } ?>
@@ -30,7 +30,7 @@
 			<li <?=($self=="settings"?"class='active'":"")?>><a href="<?=$baseurl?>Admin/Settings"><?=iconv("CP1251", "UTF-8", "Основные опции")?></a></li>
 			<?php } ?>
 			<?php if($canManageDKPTables) { ?>
-			<li <?=($self=="dkptables" || $self=="editdkptable"?"class='active'":"")?>><a href="<?=$baseurl?>Admin/DKPTables"><?=iconv("CP1251", "UTF-8", "Создание и удаление таблиц DKP")?></a></li>
+			<li <?=($self=="dkptables" || $self=="editdkptable"?"class='active'":"")?>><a href="<?=$baseurl?>Admin/DKPTables"><?=iconv("CP1251", "UTF-8", "Таблицы DKP")?></a></li>
 			<?php } ?>
 			<?php if($canManageLootTable) { ?>
 			<li <?=($self=="loottable" || $self=="editloottable"?"class='active'":"")?>><a href="<?=$baseurl?>Admin/LootTable"><?=iconv("CP1251", "UTF-8", "Таблица лута")?></a></li>

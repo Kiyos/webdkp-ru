@@ -12,7 +12,7 @@ class pageDeleteTable extends pageAdminMain {
 	=================================================*/
 	function area2()
 	{
-		$this->title = "Delete Table";
+		$this->title = iconv("CP1251", "UTF-8", "Удаление таблицы");
 		$this->border = 1;
 
 		$tableid = util::getData("id");
