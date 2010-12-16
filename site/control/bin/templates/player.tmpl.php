@@ -2,9 +2,9 @@
 <?=$tableselect?>
 <br />
 <?php if(sizeof($awards)==0){ ?>
-<?=iconv("CP1251", "UTF-8", "Этот игрок не имеет истории Dkp в этой таблице.")?>
+<?=iconv("CP1251", "UTF-8", "Этот игрок не имеет DKP-истории в этой таблице.")?>
 <?php } else { ?>
-<span class="dkpSubtitle"><?=iconv("CP1251", "UTF-8", "История Dkp")?></span>
+<span class="dkpSubtitle"><?=iconv("CP1251", "UTF-8", "DKP-история")?></span>
 <table class="dkp" cellpadding=0 cellspacing=0 id="dkptable2">
 <thead>
 <tr class="header">

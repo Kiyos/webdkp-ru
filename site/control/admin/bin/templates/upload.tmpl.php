@@ -2,7 +2,7 @@
 <?=$sidebar?>
 <div class="adminContents">
 <br />
-<?=iconv("CP1251", "UTF-8", "Здесь вы можете загрузить лог-файл сгенерированный аддоном WebDKP.")?>
+<?=iconv("CP1251", "UTF-8", "Здесь вы можете загрузить лог-файл, созданный в игре модификацией WebDKP.")?>
 <br />
 <br />
 
@@ -12,7 +12,7 @@
 <input type="submit" value="<?=iconv("CP1251", "UTF-8", "Загрузить")?>" class="mediumButton" onclick="this.disable();this.value='Uploading...';Util.Submit('uploadLog');">
 <br />
 <br />
-<div class="noticeMessage"><?=iconv("CP1251", "UTF-8", "Вы можете найти лог-файл по следующему пути: <b>WTF\Account\USERNAME\SavedVariables\WebDKP.lua")?></b></div>
+<div class="noticeMessage"><?=iconv("CP1251", "UTF-8", "Вы можете найти лог-файл по следующему пути: <b>WTF\Account\ИМЯ_УЧЕТНОЙ_ЗАПИСИ\SavedVariables\WebDKP.lua")?></b></div>
 </form>
 
 <?php if(isset($eventResult)){ ?>

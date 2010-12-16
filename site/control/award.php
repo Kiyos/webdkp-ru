@@ -83,7 +83,7 @@ class pageAward extends pageDkpMain {
 			$this->set("player", $player);
 			$this->set("award", $award);
 			$type = "normal";
-			$this->title = iconv("CP1251", "UTF-8", "Подробности награды");
+			$this->title = iconv("CP1251", "UTF-8", "Подробности о награде");
 		}
 
 		//set the title
