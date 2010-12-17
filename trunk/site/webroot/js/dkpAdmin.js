@@ -1201,16 +1201,16 @@ var ManageDKPTable = Class.create(ManualPageTable, {
 	=================================================*/
 	GetClassDropdown: function() {
 		var select = Builder.node('select',{style:'width:75px'},"");
-		select.appendChild(Builder.node('option',{value:"Druid"},"Druid"));
-		select.appendChild(Builder.node('option',{value:"Death Knight"},"Death Knight"));
-		select.appendChild(Builder.node('option',{value:"Hunter"},"Hunter"));
-		select.appendChild(Builder.node('option',{value:"Mage"},"Mage"));
-		select.appendChild(Builder.node('option',{value:"Paladin"},"Paladin"));
-		select.appendChild(Builder.node('option',{value:"Priest"},"Priest"));
-		select.appendChild(Builder.node('option',{value:"Rogue"},"Rogue"));
-		select.appendChild(Builder.node('option',{value:"Shaman"},"Shaman"));
-		select.appendChild(Builder.node('option',{value:"Warlock"},"Warlock"));
-		select.appendChild(Builder.node('option',{value:"Warrior"},"Warrior"));
+		select.appendChild(Builder.node('option',{value:"Druid"},"Друид"));
+		select.appendChild(Builder.node('option',{value:"Death Knight"},"Рыцарь смерти"));
+		select.appendChild(Builder.node('option',{value:"Hunter"},"Охотник"));
+		select.appendChild(Builder.node('option',{value:"Mage"},"Маг"));
+		select.appendChild(Builder.node('option',{value:"Paladin"},"Паладин"));
+		select.appendChild(Builder.node('option',{value:"Priest"},"Жрец"));
+		select.appendChild(Builder.node('option',{value:"Rogue"},"Разбойник"));
+		select.appendChild(Builder.node('option',{value:"Shaman"},"Шаман"));
+		select.appendChild(Builder.node('option',{value:"Warlock"},"Чернокнижник"));
+		select.appendChild(Builder.node('option',{value:"Warrior"},"Воин"));
 		return select;
 	}
 });

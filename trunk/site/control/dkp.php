@@ -14,6 +14,19 @@ class SimpleEntry {
 
 
 	function SimpleEntry($entry = ""){
+	
+		$className2class = array(
+			'Воин' => 'Warrior',
+			'Паладин' => 'Paladin',
+			'Охотник' => 'Hunter',
+			'Разбойник' => 'Rogue',
+			'Жрец' => 'Priest',
+			'Рыцарь смерти' => 'Death Knight',
+			'Шаман' => 'Shaman',
+			'Маг' => 'Mage',
+			'Чернокнижник' => 'Warlock',
+			'Друид' => 'Druid'
+		);
 
 		if($entry != "") {
 			$this->userid = $entry->user->id;
@@ -21,7 +34,8 @@ class SimpleEntry {
 			$this->lifetime = $entry->lifetime;
 			$this->player = $entry->user->name;
 			$this->playerguild = $entry->user->guild->name;
-			$this->playerclass = $entry->user->class;
+			//$this->playerclass = $entry->user->class;
+			$this->playerclass  = $className2class[iconv("UTF-8", "CP1251", $entry->user->class)];
 		}
 	}
 }
@@ -43,7 +57,7 @@ class pageDkp extends pageDkpMain {
 
 		$this->LoadPageVars("main");
 		$fulldata = dkpUtil::GetDKPTable($this->guild->id, $this->tableid, $count, $this->sort, $this->order, $this->page, $this->maxpage, $filters );
-
+		
 		$data = array();
 		$useTiers = $this->settings->GetTiersEnabled();
 		$tierSize = $this->settings->GetTierSize();
@@ -60,8 +74,9 @@ class pageDkp extends pageDkpMain {
 		$this->set("table", $table);
 		$this->set("data", $data);
 		return $this->fetch("dkp.tmpl.php");
+				
 	}
-
+	
 	function eventSetFilter()
 	{
 		$this->SetDKPFilter("main");
